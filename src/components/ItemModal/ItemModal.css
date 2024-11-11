@@ -1,0 +1,57 @@
+.modal__content_type_item {
+  width: 100%;
+  max-width: 498px;
+}
+
+.modal__close-button_type_item {
+  top: 24px;
+  right: 24px;
+
+  background-color: #ffffff;
+}
+
+.modal__close-button_type_item:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.item-modal__image {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+}
+
+.item-modal__info {
+  padding: 20px 32px 32px;
+}
+
+.item-modal__title {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #000000;
+
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.item-modal__caption {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #000000;
+
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (width < 768px) {
+  .modal__type_item {
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .item-modal__info {
+    padding: 20px 20px 40px;
+  }
+}
