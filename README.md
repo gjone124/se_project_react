@@ -27,11 +27,11 @@ This stage involves:
 
 (3)displaying a default set of clothes depending on if the weather is:
 
-(a)hot (over 86&deg;F)
+- hot (over 86&deg;F)
 
-(b)warm (between 66 and 86&deg;F)
+- warm (between 66 and 86&deg;F)
 
-(c)or cold (below 66&deg;F)
+- or cold (below 66&deg;F)
 
 (4)creating a pop-up window for each piece of clothing that allows the image to expand (and which also displays what type of weather the clothing is suitable for) when the user clicks on the piece of clothing
 
