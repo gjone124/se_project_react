@@ -71,4 +71,5 @@ This webpage will be deployed to GitHub Pages after it is accepted for review.
 **Improvements**
 
 (1)The add clothing form "submission field" will be activated in a later stage remotely.
+
 (2)User validation will also be implemented in a later stage.
