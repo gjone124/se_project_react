@@ -22,17 +22,23 @@ For the 1st stage of the project in Sprint 10 (Introduction to React.js), we wer
 This stage involves:
 
 (1)calling weather information from the OpenWeather API
+
 (2)displaying the weather information on the webpage
 
 (3)displaying a default set of clothes depending on if the weather is:
+
 (a)hot (over 86&deg;F)
+
 (b)warm (between 66 and 86&deg;F)
+
 (c)or cold (below 66&deg;F)
 
 (4)creating a pop-up window for each piece of clothing that allows the image to expand (and which also displays what type of weather the clothing is suitable for) when the user clicks on the piece of clothing
 
 (5)creating a pop-up window with a submission form when the user clicks on the "Add clothes" button
+
 (6)creating a dynamic weather card from 14 possible weather conditions that displays an image that represents the current weather (optional)
+
 (7)creating a mobile version of the webpage so the words and images are not as smooshed together (optional)
 
 **Figma**
