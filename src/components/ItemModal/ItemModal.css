@@ -6,7 +6,6 @@
 .modal__close-button_type_item {
   top: 24px;
   right: 24px;
-
   background-color: #ffffff;
 }
 
@@ -29,7 +28,6 @@
   font-size: 20px;
   line-height: 1.2;
   color: #000000;
-
   margin: 0 0 12px;
   padding: 0;
 }
@@ -40,7 +38,6 @@
   font-size: 20px;
   line-height: 1.2;
   color: #000000;
-
   margin: 0;
   padding: 0;
 }
