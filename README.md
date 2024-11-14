@@ -108,4 +108,6 @@ This webpage is deployed to GitHub Pages.
 
 (1)The add clothing form "submission field" will be activated in a later stage remotely.
 
-(2)User validation will also be implemented in a later stage.
+(2)The user will have the ability to add pieces of clothing.
+
+(3)The ability to switch back and forth between Fahrenheit and Celsius will be implemented.
