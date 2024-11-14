@@ -84,7 +84,7 @@ export const defaultClothingItems = [
 ];
 
 export const coordinates = {
-  // Location Info As Of 6pm EST, 11/14/2024 (testing different conditions)
+  // Location Info As Of 7pm EST, 11/14/2024 (testing different conditions)
   // Washington, DC, USA (where I live; nighttime, rainy, cold)
   latitude: 38.89511,
   longitude: -77.03637,

@@ -47,7 +47,7 @@ This stage involves:
 
 **Images**
 
-Here are eight screenshots of the project (as of Stage 1) taken around 6pm EST, 11/14/2024:
+Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST, 11/14/2024:
 
 Asunción, Paraguay (nighttime, clear, warm)
 
@@ -65,13 +65,13 @@ Washington, DC, USA (nighttime, rainy, cold)
 
 <div display="flex"><img align="center" alt="Washington, DC, USA" src="./src/assets/screenshots/Washington, DC, USA.png" /></div>
 
-Card Pop Up Window
+Card Pop Up Window (Desktop Version)
 
-<div display="flex"><img align="center" alt="Card Pop Up Window" src="./src/assets/screenshots/Card Pop Up Window.png" /></div>
+<div display="flex"><img align="center" alt="Card Pop Up Window (Desktop Version)" src="./src/assets/screenshots/Card Pop Up Window (Desktop Version).png" /></div>
 
-Add Clothes Pop Up Window
+Add Clothes Pop Up Window (Desktop Version)
 
-<div display="flex"><img align="center" alt="Add Clothes Pop Up Window" src="./src/assets/screenshots/Add Clothes Pop Up Window.png" /></div>
+<div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Desktop Version)" src="./src/assets/screenshots/Add Clothes Pop Up Window (Desktop Version).png" /></div>
 
 Menu Closed (Mobile Version)
 
@@ -80,6 +80,14 @@ Menu Closed (Mobile Version)
 Menu Open (Mobile Version)
 
 <div display="flex"><img align="center" alt="Menu Open (Mobile Version)" src="./src/assets/screenshots/Menu Open (Mobile Version).png" /></div>
+
+Card Pop Up Window (Mobile Version)
+
+<div display="flex"><img align="center" alt="Card Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Card Pop Up Window (Mobile Version).png" /></div>
+
+Add Clothes Pop Up Window (Mobile Version)
+
+<div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Add Clothes Pop Up Window (Moble Version).png" /></div>
 
 **Tech Used**
 
