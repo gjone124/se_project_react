@@ -47,7 +47,7 @@ This stage involves:
 
 **Images**
 
-Here are eight screenshots of the project (as of Stage 1) around 12pm EST, 11/14/2024:
+Here are eight screenshots of the project (as of Stage 1) with the desktop version screenshots (first 6) taken around 12pm EST, 11/14/2024 & with the mobile version screenshots (last 2) taken at 4:36pm EST, 11/14/2024:
 
 Asunción, Paraguay (daytime, clear, hot)
 
