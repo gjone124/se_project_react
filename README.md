@@ -49,7 +49,7 @@ This stage involves:
 
 Here are eight sets of screenshots of the project (as of Stage 1) at 12pm, 11/14/2024:
 
-Asuncion, Paraguay (daytime, clear, hot)
+Asunción, Paraguay (daytime, clear, hot)
 
 <div display="flex"><img align="center" alt="Asuncion, Paraguay" src="./src/assets/screenshots/Asuncion, Paraguay.png" /></div>
 
