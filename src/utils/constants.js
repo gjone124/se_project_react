@@ -84,7 +84,7 @@ export const defaultClothingItems = [
 ];
 
 export const coordinates = {
-  // Location Info As Of 12pm, 11/14/2024 (testing different conditions)
+  // Location Info As Of 12pm EST, 11/14/2024 (testing different conditions)
 
   // Washington, DC, USA (where I live; daytime, cloudy, cold)
   latitude: 38.89511,
@@ -98,7 +98,7 @@ export const coordinates = {
   // latitude: 15.933,
   // longitude: -85.183,
 
-  // Bethel, Alaska, USA (nighttime, snowy, cold)
+  // Bethel, Alaska, USA (daytime, snowy, cold)
   // latitude: 60.792222,
   // longitude: -161.755833,
 };
