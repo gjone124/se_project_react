@@ -47,7 +47,7 @@ This stage involves:
 
 **Images**
 
-Here are eight sets of screenshots of the project (as of Stage 1) at 12pm, 11/14/2024:
+Here are eight screenshots of the project (as of Stage 1) around 12pm, 11/14/2024:
 
 Asunción, Paraguay (daytime, clear, hot)
 
