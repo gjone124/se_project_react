@@ -47,21 +47,21 @@ This stage involves:
 
 **Images**
 
-Here are eight screenshots of the project (as of Stage 1) with the desktop version screenshots (first 6) taken around 12pm EST, 11/14/2024 & with the mobile version screenshots (last 2) taken at 4:36pm EST, 11/14/2024:
+Here are eight screenshots of the project (as of Stage 1) taken around 6pm EST, 11/14/2024:
 
-Asunción, Paraguay (daytime, clear, hot)
+Asunción, Paraguay (nighttime, clear, warm)
 
 <div display="flex"><img align="center" alt="Asuncion, Paraguay" src="./src/assets/screenshots/Asuncion, Paraguay.png" /></div>
 
-Bethel, Alaska, USA (nighttime, snowy, cold)
+Bethel, Alaska, USA (daytime, snowy, cold)
 
 <div display="flex"><img align="center" alt="Bethel, Alaska, USA" src="./src/assets/screenshots/Bethel, Alaska, USA.png" /></div>
 
-Cusuna/Iriona, Honduras (daytime, rainy, warm)
+Julia Creek, Queensland, Australia (daytime, cloudy, hot)
 
-<div display="flex"><img align="center" alt="Iriona, Honduras" src="./src/assets/screenshots/Iriona, Honduras.png" /></div>
+<div display="flex"><img align="center" alt="Julia Creek, Queensland, Australia" src="./src/assets/screenshots/Julia Creek, Queensland, Australia.png" /></div>
 
-Washington, DC, USA (daytime, cloudy, cold)
+Washington, DC, USA (nighttime, rainy, cold)
 
 <div display="flex"><img align="center" alt="Washington, DC, USA" src="./src/assets/screenshots/Washington, DC, USA.png" /></div>
 

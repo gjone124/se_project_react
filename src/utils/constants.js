@@ -84,23 +84,22 @@ export const defaultClothingItems = [
 ];
 
 export const coordinates = {
-  // Location Info As Of 12pm EST, 11/14/2024 (testing different conditions)
-
-  // Washington, DC, USA (where I live; daytime, cloudy, cold)
+  // Location Info As Of 6pm EST, 11/14/2024 (testing different conditions)
+  // Washington, DC, USA (where I live; nighttime, rainy, cold)
   latitude: 38.89511,
   longitude: -77.03637,
 
-  // Asuncion, Paraguay (daytime, clear, hot)
+  // Asuncion, Paraguay (nighttime, clear, warm)
   // latitude: -25.28646,
   // longitude: -57.647,
-
-  // Iriona, Honduras (daytime, rainy, warm)
-  // latitude: 15.933,
-  // longitude: -85.183,
 
   // Bethel, Alaska, USA (daytime, snowy, cold)
   // latitude: 60.792222,
   // longitude: -161.755833,
+
+  // Julia Creek, Queensland, Australia (daytime, cloudy, hot)
+  // latitude: -20.6561852,
+  // longitude: 141.7442214,
 };
 
 export const APIkey = "d8633e85ba6b4c163ec058a7b0364964";
