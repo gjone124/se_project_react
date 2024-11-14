@@ -57,7 +57,7 @@ Bethel, Alaska, USA (nighttime, snowy, cold)
 
 <div display="flex"><img align="center" alt="Bethel, Alaska, USA" src="./src/assets/screenshots/Bethel, Alaska, USA.png" /></div>
 
-Iriona, Honduras (daytime, rainy, warm)
+Cusuna/Iriona, Honduras (daytime, rainy, warm)
 
 <div display="flex"><img align="center" alt="Iriona, Honduras" src="./src/assets/screenshots/Iriona, Honduras.png" /></div>
 
@@ -100,7 +100,9 @@ Menu Open (Mobile Version)
 
 **Deployment**
 
-This webpage will be deployed to GitHub Pages after it is accepted for review.
+This webpage is deployed to GitHub Pages.
+
+-Deployment Link: https://gjone124.github.io/se_project_react/
 
 **Improvements**
 
