@@ -139,6 +139,8 @@
     padding: 28px 28px 32px;
     border-radius: 12px 12px 0 0;
     align-self: flex-end;
+    position: relative;
+    top: -60px;
   }
 
   .modal-form__title {
