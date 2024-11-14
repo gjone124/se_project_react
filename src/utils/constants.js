@@ -84,26 +84,23 @@ export const defaultClothingItems = [
 ];
 
 export const coordinates = {
-  // // Location Info As Of 3pm, 11/11/2024 (testing different conditions)
-  // // Washington, DC, USA (where I live; daytime, cloudy, warm)
+  // Location Info As Of 12pm, 11/14/2024 (testing different conditions)
+
+  // Washington, DC, USA (where I live; daytime, cloudy, cold)
   latitude: 38.89511,
   longitude: -77.03637,
 
-  // // //Shanghai, China (nighttime, clear, cold)
-  // latitude: 31.224361,
-  // longitude: 121.46917,
-
-  // //Asuncion, Paraguay (daytime, cloudy, hot)
+  // Asuncion, Paraguay (daytime, clear, hot)
   // latitude: -25.28646,
   // longitude: -57.647,
 
-  // // //Matane, Quebec, Canada (daytime, rain, cold)
-  // latitude: 48.849998,
-  // longitude: -67.533333,
+  // Iriona, Honduras (daytime, rainy, warm)
+  // latitude: 15.933,
+  // longitude: -85.183,
 
-  // //Mount Rainier National Park (Pierce County), Washington, USA (daytime, snowy, cold)
-  // latitude: 46.879967,
-  // longitude: -121.726906,
+  // Bethel, Alaska, USA (nighttime, snowy, cold)
+  // latitude: 60.792222,
+  // longitude: -161.755833,
 };
 
 export const APIkey = "d8633e85ba6b4c163ec058a7b0364964";

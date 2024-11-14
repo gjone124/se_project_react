@@ -5,6 +5,7 @@
   border-radius: 20px;
   width: 365px;
   max-width: 100%;
+  aspect-ratio: 1;
   overflow: hidden;
   cursor: pointer;
 }

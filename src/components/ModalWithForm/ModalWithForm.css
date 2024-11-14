@@ -97,17 +97,17 @@
 }
 
 .modal-form__radio-button {
+  appearance: none;
   width: 16px;
+  aspect-ratio: 1;
   border-radius: 50%;
   border: 8px solid #fff;
   background-color: #000000;
-  color: #000000;
+  box-shadow: 0 0 0 1px #000000;
 }
 
 .modal-form__radio-button:checked {
   border-width: 2px;
-  background-color: #000000;
-  border-color: #000000;
 }
 
 .modal-form__button {

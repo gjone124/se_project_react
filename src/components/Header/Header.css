@@ -53,11 +53,12 @@
 }
 
 .header__menu-button {
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   right: 0;
   display: none;
   width: 28px;
+  aspect-ratio: 1;
   padding: 0;
   margin: 8px;
   border: none;

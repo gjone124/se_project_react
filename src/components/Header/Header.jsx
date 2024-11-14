@@ -23,10 +23,7 @@ function Header({ onAddClothes, weatherData, isMenuOpen, onMenuOpen }) {
             isMenuOpen ? "header__menu-button_opened" : ""
           }`}
           onClick={onMenuOpen}
-        >
-          hamburger
-          {/* hamburger icon isn't showing up without text being added here */}
-        </button>
+        ></button>
         <div
           className={`header__user ${
             !isMenuOpen ? "header__user_type_menu-closed" : ""

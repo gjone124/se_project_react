@@ -47,6 +47,40 @@ This stage involves:
 
 **Images**
 
+Here are eight sets of screenshots of the project (as of Stage 1) at 12pm, 11/14/2024:
+
+Asuncion, Paraguay (daytime, clear, hot)
+
+<div display="flex"><img align="center" alt="Asuncion, Paraguay" src="./src/assets/screenshots/Asuncion, Paraguay.png" /></div>
+
+Bethel, Alaska, USA (nighttime, snowy, cold)
+
+<div display="flex"><img align="center" alt="Bethel, Alaska, USA" src="./src/assets/screenshots/Bethel, Alaska, USA.png" /></div>
+
+Iriona, Honduras (daytime, rainy, warm)
+
+<div display="flex"><img align="center" alt="Iriona, Honduras" src="./src/assets/screenshots/Iriona, Honduras.png" /></div>
+
+Washington, DC, USA (daytime, cloudy, cold)
+
+<div display="flex"><img align="center" alt="Washington, DC, USA" src="./src/assets/screenshots/Washington, DC, USA.png" /></div>
+
+Card Pop Up Window
+
+<div display="flex"><img align="center" alt="Card Pop Up Window" src="./src/assets/screenshots/Card Pop Up Window.png" /></div>
+
+Add Clothes Pop Up Window
+
+<div display="flex"><img align="center" alt="Add Clothes Pop Up Window" src="./src/assets/screenshots/Add Clothes Pop Up Window.png" /></div>
+
+Menu Closed (Mobile Version)
+
+<div display="flex"><img align="center" alt="Menu Closed (Mobile Version)" src="./src/assets/screenshots/Menu Closed (Mobile Version).png" /></div>
+
+Menu Open (Mobile Version)
+
+<div display="flex"><img align="center" alt="Menu Open (Mobile Version)" src="./src/assets/screenshots/Menu Open (Mobile Version).png" /></div>
+
 **Tech Used**
 
 - HTML
