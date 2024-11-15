@@ -21,11 +21,11 @@ For the 1st stage of the project in Sprint 10 (Introduction to React.js), we wer
 
 This stage involves:
 
-(1)calling weather information from the OpenWeather API
+1)calling weather information from the OpenWeather API
 
-(2)displaying the weather information on the webpage
+2)displaying the weather information on the webpage
 
-(3)displaying a default set of clothes depending on if the weather is:
+3)displaying a default set of clothes depending on if the weather is:
 
 - hot (over 86&deg;F)
 
@@ -33,13 +33,13 @@ This stage involves:
 
 - or cold (below 66&deg;F)
 
-(4)creating a pop-up window for each piece of clothing that allows the image to expand (and which also displays what type of weather the clothing is suitable for) when the user clicks on the piece of clothing
+  4)creating a pop-up window for each piece of clothing that allows the image to expand (and which also displays what type of weather the clothing is suitable for) when the user clicks on the piece of clothing
 
-(5)creating a pop-up window with a submission form when the user clicks on the "Add clothes" button
+  5)creating a pop-up window with a submission form when the user clicks on the "Add clothes" button
 
-(6)creating a dynamic weather card from 14 possible weather conditions that displays an image that represents the current weather (optional)
+  6)creating a dynamic weather card from 14 possible weather conditions that displays an image that represents the current weather (optional)
 
-(7)creating a mobile version of the webpage so the words and images are not as smooshed together (optional)
+  7)creating a mobile version of the webpage so the words and images are not as smooshed together (optional)
 
 **Figma**
 
@@ -51,7 +51,7 @@ Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST,
 
 1)Asunción, Paraguay (nighttime, clear, warm)
 
-<div display="flex"><img align="center" alt="Asuncion, Paraguay" src="./src/assets/screenshots/Asuncion, Paraguay.png" /></div>
+<div display="flex"><img align="center" alt="Asuncion, Paraguay" src="./src/assets/screenshots/Asuncion, Paraguay.png" /></div><br>
 
 2)Bethel, Alaska, USA (daytime, snowy, cold)
 
