@@ -49,43 +49,43 @@ This stage involves:
 
 Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST, 11/14/2024:
 
-Asunción, Paraguay (nighttime, clear, warm)
+1)Asunción, Paraguay (nighttime, clear, warm)
 
 <div display="flex"><img align="center" alt="Asuncion, Paraguay" src="./src/assets/screenshots/Asuncion, Paraguay.png" /></div>
 
-Bethel, Alaska, USA (daytime, snowy, cold)
+2)Bethel, Alaska, USA (daytime, snowy, cold)
 
 <div display="flex"><img align="center" alt="Bethel, Alaska, USA" src="./src/assets/screenshots/Bethel, Alaska, USA.png" /></div>
 
-Julia Creek, Queensland, Australia (daytime, cloudy, hot)
+3)Julia Creek, Queensland, Australia (daytime, cloudy, hot)
 
 <div display="flex"><img align="center" alt="Julia Creek, Queensland, Australia" src="./src/assets/screenshots/Julia Creek, Queensland, Australia.png" /></div>
 
-Washington, DC, USA (nighttime, rainy, cold)
+4)Washington, DC, USA (nighttime, rainy, cold)
 
 <div display="flex"><img align="center" alt="Washington, DC, USA" src="./src/assets/screenshots/Washington, DC, USA.png" /></div>
 
-Card Pop Up Window (Desktop Version)
+5)Card Pop Up Window (Desktop Version)
 
 <div display="flex"><img align="center" alt="Card Pop Up Window (Desktop Version)" src="./src/assets/screenshots/Card Pop Up Window (Desktop Version).png" /></div>
 
-Add Clothes Pop Up Window (Desktop Version)
+6)Add Clothes Pop Up Window (Desktop Version)
 
 <div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Desktop Version)" src="./src/assets/screenshots/Add Clothes Pop Up Window (Desktop Version).png" /></div>
 
-Menu Closed (Mobile Version)
+7)Menu Closed (Mobile Version)
 
 <div display="flex"><img align="center" alt="Menu Closed (Mobile Version)" src="./src/assets/screenshots/Menu Closed (Mobile Version).png" /></div>
 
-Menu Open (Mobile Version)
+8)Menu Open (Mobile Version)
 
 <div display="flex"><img align="center" alt="Menu Open (Mobile Version)" src="./src/assets/screenshots/Menu Open (Mobile Version).png" /></div>
 
-Card Pop Up Window (Mobile Version)
+9)Card Pop Up Window (Mobile Version)
 
 <div display="flex"><img align="center" alt="Card Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Card Pop Up Window (Mobile Version).png" /></div>
 
-Add Clothes Pop Up Window (Mobile Version)
+10)Add Clothes Pop Up Window (Mobile Version)
 
 <div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Add Clothes Pop Up Window (Moble Version).png" /></div>
 
