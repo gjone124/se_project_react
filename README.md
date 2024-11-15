@@ -59,7 +59,7 @@ Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST,
 
 3)Julia Creek, Queensland, Australia (daytime, cloudy, hot)
 
-<div display="flex"><img align="center" alt="Julia Creek, Queensland, Australia" src="./src/assets/screenshots/Julia Creek, Queensland, Australia.png" /></div>
+<div display="flex"><img align="center" alt="Julia Creek, Queensland, Australia" src="./src/assets/screenshots/Julia Creek, Queensland, Australia.png" /></div><br>
 
 4)Washington, DC, USA (nighttime, rainy, cold)
 
