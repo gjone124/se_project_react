@@ -1,5 +1,9 @@
+import { Link } from "react-router-dom";
+
 import wtwrLogo from "../../assets/wtwr-logo.svg";
 import avatar from "../../assets/avatar.svg";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+
 import "./Header.css";
 
 function Header({ onAddClothes, weatherData, isMenuOpen, onMenuOpen }) {
@@ -11,7 +15,10 @@ function Header({ onAddClothes, weatherData, isMenuOpen, onMenuOpen }) {
   return (
     <header className="header">
       <div className="header__info">
-        <img src={wtwrLogo} alt="wtwr logo" className="header__logo" />
+        <Link to="/">
+          {" "}
+          <img src={wtwrLogo} alt="wtwr logo" className="header__logo" />
+        </Link>
         <p className="header__date-and-location">{`${currentDate}, ${weatherData.city}`}</p>
       </div>
       <div
@@ -24,14 +31,16 @@ function Header({ onAddClothes, weatherData, isMenuOpen, onMenuOpen }) {
           }`}
           onClick={onMenuOpen}
         ></button>
-        <div
-          className={`header__user ${
-            !isMenuOpen ? "header__user_type_menu-closed" : ""
-          }`}
-        >
-          <p className="header__name">Terrence Tegegne</p>
-          <img src={avatar} alt="avatar" className="header__avatar" />
-        </div>
+        <Link to="/profile" className="header__link">
+          <div
+            className={`header__user ${
+              !isMenuOpen ? "header__user_type_menu-closed" : ""
+            }`}
+          >
+            <p className="header__name">Terrence Tegegne</p>
+            <img src={avatar} alt="default avatar" className="header__avatar" />
+          </div>
+        </Link>
         <button
           type="button"
           className={`header__clothes-button ${
@@ -41,6 +50,7 @@ function Header({ onAddClothes, weatherData, isMenuOpen, onMenuOpen }) {
         >
           + Add clothes
         </button>
+        <ToggleSwitch />
       </div>
     </header>
   );

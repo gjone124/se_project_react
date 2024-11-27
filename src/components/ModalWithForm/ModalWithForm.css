@@ -110,7 +110,7 @@
   border-width: 2px;
 }
 
-.modal-form__button {
+.modal-form__submit-button {
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -125,11 +125,11 @@
   width: max-content;
 }
 
-.modal-form__button:hover {
+.modal-form__submit-button:hover {
   opacity: 0.6;
 }
 
-.modal-form__button:disabled {
+.modal-form__submit-button:disabled {
   opacity: 0.3;
 }
 
@@ -147,7 +147,7 @@
     margin: 0 0 37px;
   }
 
-  .modal-form__button {
+  .modal-form__submit-button {
     width: 100%;
     margin: 6px 0 0;
   }
