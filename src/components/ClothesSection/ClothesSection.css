@@ -1,6 +1,8 @@
 .clothes-section__header {
   display: flex;
   flex-direction: row;
+  gap: 20px;
+  font-size: 20px;
 }
 
 .clothes-section__button {

@@ -1,4 +1,11 @@
 .side-bar {
   min-width: 229px;
   display: flex;
+  gap: 16px;
+  font-size: 20px;
+}
+
+.side-bar__avatar {
+  height: 56px;
+  width: 56px;
 }

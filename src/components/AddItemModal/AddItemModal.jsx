@@ -32,7 +32,7 @@ const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
         setUrl("");
         setWeatherType("");
       })
-      .catch((error) => {});
+      .catch(console.error);
   };
 
   return (

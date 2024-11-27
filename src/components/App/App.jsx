@@ -33,7 +33,7 @@ function App() {
     condition: "default",
     temp: { F: 999, C: 999 },
   });
-  const [activeModal, setActiveModal] = useState(null);
+  const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   // const [temperature, setTemperature] = useState(null); /* added */
   const [clothingItems, setClothingItems] = useState([]);
@@ -75,9 +75,7 @@ function App() {
   // };
 
   function handleSubmit(request) {
-    return request()
-      .then(onClose)
-      .catch((error) => {});
+    return request().then(onClose).catch(console.error);
   }
 
   function onAddItem(item) {
