@@ -1,4 +1,4 @@
-# Project 4: React: What To Wear? (WTWR)
+# Project 5: React: What To Wear? (WTWR)
 
 ### Overview
 
@@ -13,7 +13,7 @@
 
 This application is designed to retrieve the current weather at a designated location from an API (openweathermap.org). Based on the current temperature, clothing is recommended to wear.
 
-This is the 5th project for the Triple Ten Software Engineering program. It's associated with Sprint 10, 11, 12, 13, 14, and 15.
+This is the 6th project for the Triple Ten Software Engineering program. It's associated with Sprint 10, 11, 12, 13, 14, and 15.
 
 **Stage 1 (Sprint 10)**
 
