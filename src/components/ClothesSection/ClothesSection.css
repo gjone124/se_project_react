@@ -24,8 +24,34 @@
 }
 
 .clothes-section__items {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 0; */
+
+  list-style: none;
+  display: grid;
+  justify-content: flex-start;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(0, min(100%/2 - 20px * 1 / 2, max(325px, 100%/4 - 20px * 3 / 4)))
+  );
+  grid-gap: 20px 20px;
+  margin: 0;
   padding: 0;
 }
+/* 
+@media screen and (max-width: 830px) {
+  .clothes-section__items {
+    list-style: none;
+    display: grid;
+    justify-content: flex-start;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(0, min(100%/2 - 20px * 1 / 2, max(325px, 100%/4 - 20px * 3 / 4)))
+    );
+    grid-gap: 20px 20px;
+    margin: 0;
+    padding: 0;
+  }
+} */
