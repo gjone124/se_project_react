@@ -65,19 +65,21 @@ For the 2nd stage of the project in Sprint 11 (React Routing and State Managemen
 
 The second stage involves:
 
-1)creating a Toggle Switch to be able to change the temperature displayed from Fahrenheit to Celsius and from Celsius to Fahrenheit
+1)adding functionality to add & remove pieces of clothing from the collection displayed
 
-2)creating a mock server using JSON on your local server (http://localhost:3001)
+2)creating a Toggle Switch to be able to change the temperature displayed from Fahrenheit to Celsius and from Celsius to Fahrenheit
 
-3)creating a Profile component that displays all the potential clothing options
+3)creating a mock server using JSON on your local server (http://localhost:3001)
 
-4)creating 2 routes:
+4)creating a Profile component that displays all the potential clothing options
 
-- 1 for the Main component (accessed by clicking in the top left corner on the "WTWR" logo)
+5)creating 2 routes:
 
-- 1 for the Profile component (accessed by clicking in the tope right corner on the username (Terrence Tegegne) or the user logo)
+&nbsp;&nbsp;&nbsp;a)1 for the Main component (accessed by clicking in the top left corner on the "WTWR" logo)
 
-  5)creating a mobile version of the Profile component
+&nbsp;&nbsp;&nbsp;b)1 for the Profile component (accessed by clicking in the tope right corner on the username (Terrence Tegegne) or the user logo)
+
+6)creating a mobile version of the Profile component (optional)
 
 **Figma**
 
