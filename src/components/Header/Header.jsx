@@ -50,7 +50,7 @@ function Header({ onAddClothes, weatherData, isMenuOpen, onMenuOpen }) {
         >
           + Add clothes
         </button>
-        <ToggleSwitch />
+        <ToggleSwitch isMenuOpen={isMenuOpen} />
       </div>
     </header>
   );

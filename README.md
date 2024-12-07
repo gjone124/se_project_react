@@ -4,10 +4,12 @@
 
 - Intro
 - Stage 1 (Sprint 10)
+- Stage 2 (Sprint 11)
 - Figma
 - Images
 - Tech Used
 - Deployment
+- Improvements
 
 **Intro**
 
@@ -15,11 +17,21 @@ This application is designed to retrieve the current weather at a designated loc
 
 This is the 6th project for the Triple Ten Software Engineering program. It's associated with Sprint 10, 11, 12, 13, 14, and 15.
 
+Sprint 10 and 11 focuses on building the front end application (se_project_react).
+
+Sprint 12 and 13 focuses on building the back end application (se_project_express).
+
+Sprint 14 and 15 connects the front end and back end applications to each other.
+
 **Stage 1 (Sprint 10)**
+
+Terminal Scripts Needed To Run Program:
+
+1)npm run dev
 
 For the 1st stage of the project in Sprint 10 (Introduction to React.js), we were given an adaptive web design through figma.com ( [link to Stage 1 Figma](https://www.figma.com/file/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR) ) and we were told to replicate the web page from scratch using HTML, CSS, and JSX.
 
-This stage involves:
+The first stage involves:
 
 1)calling weather information from the OpenWeather API
 
@@ -41,9 +53,37 @@ This stage involves:
 
   7)creating a mobile version of the webpage so the words and images are not as smooshed together (optional)
 
+**Stage 2 (Sprint 11)**
+
+Terminal Scripts Needed To Run Program:
+
+1)npm run dev (1st terminal)
+
+2)json-server --watch db.json --id \_id --port 3001 (2nd terminal)
+
+For the 2nd stage of the project in Sprint 11 (React Routing and State Management), we were given a 2nd design (which added onto the previous design) through figma.com ( [link to Stage 2 Figma](https://www.figma.com/design/dQLJwEKasIdspciJAJrCaf/Sprint-11_-WTWR) ) and we were told to replicate it.
+
+The second stage involves:
+
+1)creating a Toggle Switch to be able to change the temperature displayed from Fahrenheit to Celsius and from Celsius to Fahrenheit
+
+2)creating a mock server using JSON on your local server (http://localhost:3001)
+
+3)creating a Profile component that displays all the potential clothing options
+
+4)creating 2 routes:
+
+- 1 for the Main component (accessed by clicking in the top left corner on the "WTWR" logo)
+
+- 1 for the Profile component (accessed by clicking in the tope right corner on the username (Terrence Tegegne) or the user logo)
+
+  5)creating a mobile version of the Profile component
+
 **Figma**
 
 - [Link to the project on Figma for Stage 1 (Sprint 10)](https://www.figma.com/file/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR)
+
+- [Link to the project on Figma for Stage 2 (Sprint 11)](https://www.figma.com/design/dQLJwEKasIdspciJAJrCaf/Sprint-11_-WTWR)
 
 **Images**
 
@@ -105,12 +145,13 @@ Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST,
 - Hover elements
 - API
 - Figma
+- Mock Server
 
 **Deployment**
 
 This webpage is deployed to GitHub Pages.
 
--Deployment Link: https://gjone124.github.io/se_project_react/
+-Deployment Link (as of Stage 1): https://gjone124.github.io/se_project_react/
 
 **Improvements**
 

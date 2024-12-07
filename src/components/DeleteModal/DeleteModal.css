@@ -47,7 +47,7 @@
   margin: 40px 0 0;
 }
 
-@media screen and (width < 768px) {
+@media screen and (width < 800px) {
   .modal__type_item {
     padding: 0 16px;
     box-sizing: border-box;

@@ -133,7 +133,7 @@
   opacity: 0.3;
 }
 
-@media screen and (width < 768px) {
+@media screen and (width < 800px) {
   .modal__content_type_form {
     width: 100%;
     padding: 28px 28px 32px;

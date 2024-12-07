@@ -36,7 +36,7 @@
   object-position: center;
 }
 
-@media screen and (width < 768px) {
+@media screen and (width < 800px) {
   .item-card__label {
     top: 7px;
   }

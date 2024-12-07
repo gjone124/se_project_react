@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.toggle-switch_type_menu-closed {
+  display: block;
+}
+
 .toggle-switch__box {
   border-radius: 25px;
   border: 2px solid #000000;
@@ -40,19 +44,21 @@
 .switch__temperature-F {
   position: absolute;
   font-size: 14px;
-  top: -1px;
+  top: 7px;
   left: 10px;
+  margin: 0;
 }
 
 .switch__temperature-C {
   position: absolute;
   font-size: 14px;
-  top: -1px;
+  top: 7px;
   left: 36px;
+  margin: 0;
 }
 
-@media screen and (width < 768px) {
-  .toggle-switch {
+@media screen and (width < 800px) {
+  .toggle-switch_type_menu-closed {
     display: none;
   }
 }

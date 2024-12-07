@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "./ToggleSwitch.css";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext";
 
-const ToggleSwitch = () => {
+function ToggleSwitch({ isMenuOpen }) {
   //   const [currentTemperatureUnit, handleToggleSwitchChange] = useState("C");
 
   //   const handleChange = (event) => {
@@ -16,7 +16,11 @@ const ToggleSwitch = () => {
   // console.log(currentTemperatureUnit);
 
   return (
-    <label className="toggle-switch">
+    <label
+      className={`toggle-switch ${
+        !isMenuOpen ? "toggle-switch_type_menu-closed" : ""
+      }`}
+    >
       <input
         type="checkbox"
         name="toggle-switch-box" /* added to fix error */
@@ -46,6 +50,6 @@ const ToggleSwitch = () => {
       </p>
     </label>
   );
-};
+}
 
 export default ToggleSwitch;

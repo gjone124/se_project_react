@@ -7,19 +7,19 @@ import "./AddItemModal.css";
 const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
   const [name, setName] = useState("");
   const handleNameChange = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setName(event.target.value);
   };
 
   const [link, setUrl] = useState("");
   const handleUrlChange = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setUrl(event.target.value);
   };
 
   const [weatherType, setWeatherType] = useState(""); // New state for weather type
   const handleWeatherChange = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setWeatherType(event.target.value); // Update weather type when radio button changes
   };
 
