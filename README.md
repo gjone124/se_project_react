@@ -39,19 +39,19 @@ The first stage involves:
 
 3)displaying a default set of clothes depending on if the weather is:
 
-- hot (over 86&deg;F)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a)hot (over 86&deg;F)
 
-- warm (between 66 and 86&deg;F)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)warm (between 66 and 86&deg;F) or
 
-- or cold (below 66&deg;F)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c)cold (below 66&deg;F)
 
-  4)creating a pop-up window for each piece of clothing that allows the image to expand (and which also displays what type of weather the clothing is suitable for) when the user clicks on the piece of clothing
+4)creating a pop-up window for each piece of clothing that allows the image to expand (and which also displays what type of weather the clothing is suitable for) when the user clicks on the piece of clothing
 
-  5)creating a pop-up window with a submission form when the user clicks on the "Add clothes" button
+5)creating a pop-up window with a submission form when the user clicks on the "Add clothes" button
 
-  6)creating a dynamic weather card from 14 possible weather conditions that displays an image that represents the current weather (optional)
+6)creating a dynamic weather card from 14 possible weather conditions that displays an image that represents the current weather (optional)
 
-  7)creating a mobile version of the webpage so the words and images are not as smooshed together (optional)
+7)creating a mobile version of the webpage so the words and images are not as smooshed together (optional)
 
 **Stage 2 (Sprint 11)**
 
@@ -75,9 +75,9 @@ The second stage involves:
 
 5)creating 2 routes:
 
-&nbsp;&nbsp;&nbsp;a)1 for the Main component (accessed by clicking in the top left corner on the "WTWR" logo)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a)1 for the Main component (accessed by clicking in the top left corner on the "WTWR" logo)
 
-&nbsp;&nbsp;&nbsp;b)1 for the Profile component (accessed by clicking in the tope right corner on the username (Terrence Tegegne) or the user logo)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)1 for the Profile component (accessed by clicking in the tope right corner on the username (Terrence Tegegne) or the user logo)
 
 6)creating a mobile version of the Profile component (optional)
 
