@@ -25,7 +25,7 @@ Sprint 14 and 15 connects the front end and back end applications to each other.
 
 **Stage 1 (Sprint 10)**
 
-Terminal Scripts Needed To Run Program:
+Terminal Scripts Needed To Run Stage 1 Program:
 
 1)npm run dev
 
@@ -55,11 +55,11 @@ The first stage involves:
 
 **Stage 2 (Sprint 11)**
 
-Terminal Scripts Needed To Run Program:
+Terminal Scripts Needed To Run Stage 2 Program:
 
-1)npm run dev (1st terminal)
+1)npm run dev (in 1st terminal)
 
-2)json-server --watch db.json --id \_id --port 3001 (2nd terminal)
+2)json-server --watch db.json --id \_id --port 3001 (in 2nd terminal)
 
 For the 2nd stage of the project in Sprint 11 (React Routing and State Management), we were given a 2nd design (which added onto the previous design) through figma.com ( [link to Stage 2 Figma](https://www.figma.com/design/dQLJwEKasIdspciJAJrCaf/Sprint-11_-WTWR) ) and we were told to replicate it.
 
