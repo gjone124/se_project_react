@@ -89,7 +89,7 @@ The second stage involves:
 
 - [Link to the project on Figma for Stage 2 (Sprint 11)](https://www.figma.com/design/dQLJwEKasIdspciJAJrCaf/Sprint-11_-WTWR)
 
-**Images**
+**Images (Stage 1)**
 
 Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST, 11/14/2024:
 
@@ -132,6 +132,38 @@ Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST,
 10)Add Clothes Pop Up Window (Mobile Version)
 
 <div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Stage1/Add Clothes Pop Up Window (Mobile Version).png" /></div><br>
+
+**Images (Stage 2)**
+
+Here are seven screenshots of the project (as of Stage 2):
+
+1)Main Component (Fahrenheit)
+
+<div display="flex"><img align="center" alt="Main Component (Fahrenheit)" src="./src/assets/screenshots/Stage2/Main Component (Fahrenheit).png" /></div><br>
+
+2)Main Component (Celsius)
+
+<div display="flex"><img align="center" alt="Main Component (Celsius)" src="./src/assets/screenshots/Stage2/Main Component (Celsius).png" /></div><br>
+
+3)Clothing Item Pop-Up Window (Delete Item Button Added)
+
+<div display="flex"><img align="center" alt="Clothing Item Pop-Up Window" src="./src/assets/screenshots/Stage2/Clothing Item Pop-Up Window.png" /></div><br>
+
+4)Delete Item Confirmation Pop-Up Window
+
+<div display="flex"><img align="center" alt="Delete Item Confirmation Pop-Up Window" src="./src/assets/screenshots/Stage2/Delete Item Confirmation Pop-Up Window.png" /></div><br>
+
+5)Profile Component (Desktop Version)
+
+<div display="flex"><img align="center" alt="Profile Component (Desktop Version)" src="./src/assets/screenshots/Stage2/Profile Component (Desktop Version).png" /></div><br>
+
+6)Main Component (Mobile Version)
+
+<div display="flex"><img align="center" alt="Main Component (Mobile Version)" src="./src/assets/screenshots/Stage2/Main Component (Mobile Version).png" /></div><br>
+
+7)Profile Component (Mobile Version)
+
+<div display="flex"><img align="center" alt="Profile Component (Mobile Version)" src="./src/assets/screenshots/Stage2/Profile Component (Mobile Version).png" /></div><br>
 
 **Tech Used**
 
