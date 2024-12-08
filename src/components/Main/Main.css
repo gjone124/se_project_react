@@ -14,10 +14,7 @@
   list-style: none;
   display: grid;
   justify-content: flex-start;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(0, min(100%/2 - 20px * 1 / 2, max(325px, 100%/4 - 20px * 3 / 4)))
-  );
+  grid-template-columns: repeat(auto-fit, minmax(calc(250px - 20px), 1fr));
   grid-gap: 20px 20px;
   margin: 0;
   padding: 0;
@@ -35,8 +32,8 @@
   .main__items {
     grid-template-columns: repeat(
       auto-fit,
-      minmax(0, min(100%/2 - 15px * 1 / 2, max(325px, 100%/4 - 16px * 3 / 4)))
+      minmax(0, min(100%/2 - 15px * 1 / 2, max(375px, 100%/4 - 15px * 3 / 4)))
     );
-    grid-gap: 16px 15px;
+    grid-gap: 15px 15px;
   }
 }
