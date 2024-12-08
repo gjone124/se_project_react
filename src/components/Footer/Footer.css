@@ -1,7 +1,7 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  margin-top: auto;
+  margin-top: 80px;
   justify-self: end;
 }
 
@@ -21,4 +21,10 @@
   line-height: 1.25;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (width < 800px) {
+  .footer {
+    margin-top: 40px;
+  }
 }
