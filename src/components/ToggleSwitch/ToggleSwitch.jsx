@@ -3,17 +3,9 @@ import "./ToggleSwitch.css";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext";
 
 function ToggleSwitch({ isMenuOpen }) {
-  //   const [currentTemperatureUnit, handleToggleSwitchChange] = useState("C");
-
-  //   const handleChange = (event) => {
-  //     if (currentTemperatureUnit === "C") handleToggleSwitchChange("F");
-  //     if (currentTemperatureUnit === "F") handleToggleSwitchChange("C");
-  //   };
-  //   console.log(currentTemperatureUnit);
   const { currentTemperatureUnit, handleToggleSwitchChange } = useContext(
     CurrentTemperatureUnitContext
   );
-  // console.log(currentTemperatureUnit);
 
   return (
     <label
@@ -23,7 +15,7 @@ function ToggleSwitch({ isMenuOpen }) {
     >
       <input
         type="checkbox"
-        name="toggle-switch-box" /* added to fix error */
+        name="toggle-switch-box"
         className="toggle-switch__box"
         onChange={handleToggleSwitchChange}
       />

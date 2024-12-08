@@ -2,8 +2,6 @@ import { defaultClothingItems } from "../../utils/constants";
 import ItemCard from "../ItemCard/ItemCard";
 import "./ClothesSection.css";
 
-/* TODO - pass "onCardClick={onCardClick}" as prop (to ClothesSection brackets) later to ItemCard; Kevin commented onCardClick out in tutorial video*/
-
 function ClothesSection({ onCardClick, items, onAddClothes }) {
   return (
     <div className="clothes-section">

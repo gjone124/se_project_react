@@ -35,7 +35,6 @@ function App() {
   });
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
-  // const [temperature, setTemperature] = useState(null); /* added */
   const [clothingItems, setClothingItems] = useState([]);
   const [isMobileMenuOpened, setMobileMenuOpened] = useState(false);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
@@ -70,21 +69,12 @@ function App() {
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
   };
 
-  // const onSubmit = (event) => {
-  //   event.preventDefault();
-  // };
-
   function handleSubmit(request) {
     return request().then(onClose).catch(console.error);
   }
 
+  // fetch to mock server, add item to mock server, & then add item to the DOM (Document Object Modifier)
   function onAddItem(item) {
-    //fetch to your mock server to add a new item to the server
-    //add the item to the dom (visually)
-    //onClose(activeModal);
-    //console.log(values);
-    // console.log(event.target);
-
     const addItemRequest = () => {
       return postItem(item).then((data) => {
         setClothingItems([data, ...clothingItems]);
@@ -93,10 +83,6 @@ function App() {
 
     return handleSubmit(addItemRequest);
   }
-
-  // function onDeleteItem(item) {
-  //   onClose(activeModal);
-  // }
 
   function onDeleteItem(item) {
     const deleteRequest = () => {
@@ -123,17 +109,13 @@ function App() {
   }, []);
 
   // get items
-  /* added */
   useEffect(() => {
     getItems()
       .then((data) => {
-        // console.log(data);
         setClothingItems(data.reverse());
       })
       .catch(console.error);
   }, []);
-
-  // console.log(currentTemperatureUnit);
 
   return (
     <div className="page">
@@ -171,7 +153,6 @@ function App() {
       </CurrentTemperatureUnitContext.Provider>
 
       <Footer />
-      {/* added */}
       <AddItemModal
         name="add-garment-form"
         onClose={onClose}
@@ -179,7 +160,6 @@ function App() {
         onAddItem={onAddItem}
         activeModal={activeModal}
       />
-      {/* added */}
       <ItemModal
         name="preview"
         onClose={onClose}

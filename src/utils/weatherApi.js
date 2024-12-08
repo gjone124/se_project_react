@@ -10,10 +10,8 @@ export function filterWeatherData(data) {
   const result = {};
   result.city = data.name;
 
-  //if you don't implement the Math.round method (rounds to the nearest whole number),
-  //then you get a temperature with 2 decimal places
-
-  /* value modified for result.temp */
+  //Math.round method necessary to round temperature to nearest whole number
+  //otherwise, you get a temperature with 2 decimal places
   result.temp = {
     F: Math.round(data.main.temp),
     C: Math.round(((data.main.temp - 32) * 5) / 9),
@@ -38,18 +36,3 @@ function getWeatherType(temperature) {
     return "cold";
   }
 }
-
-/* added */
-// export const parseWeatherData = (data) => {
-//   const main = data.main;
-//   const temperature = main && main.temp;
-//   const weather = {
-//     temperature: { F: Math.round(temperature) },
-//     C: Math.round(((temperature - 32) * 5) / 9),
-//   };
-//   console.log(weather);
-//   return weather;
-// };
-
-// weather.temperature.F = data.main.temp;
-// weather.temperature.C = Math.round((data.main.temp - 32) * 5/9);

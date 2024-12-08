@@ -10,10 +10,10 @@ function ModalWithForm({
   buttonText,
   onSubmit,
   children,
-  onOpen /* added */,
+  onOpen,
 }) {
   // Only render the ModalWithForm if activeModal matches the name of the modal
-  if (activeModal !== name) return null; /* added */
+  if (activeModal !== name) return null;
 
   return (
     <Modal
