@@ -75,9 +75,9 @@ The second stage involves:
 
 5)creating 2 routes:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a)1 for the Main component (accessed by clicking in the top left corner on the "WTWR" logo)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a)1 for the Main component ("/"; accessed by clicking in the top left corner on the "WTWR" logo)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)1 for the Profile component (accessed by clicking in the tope right corner on the username (Terrence Tegegne) or the user logo)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)1 for the Profile component ("/Profile"; accessed by clicking in the tope right corner on the username (Terrence Tegegne) or the user logo)
 
 6)creating a mobile version of the Profile component (optional)
 
@@ -147,7 +147,8 @@ Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST,
 - Hover elements
 - API
 - Figma
-- Mock Server
+- Mock Server (JSON Server)
+- Routing
 
 **Deployment**
 
