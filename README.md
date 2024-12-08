@@ -9,7 +9,6 @@
 - Images
 - Tech Used
 - Deployment
-- Improvements
 
 **Intro**
 
