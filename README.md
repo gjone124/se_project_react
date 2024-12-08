@@ -131,7 +131,7 @@ Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST,
 
 10)Add Clothes Pop Up Window (Mobile Version)
 
-<div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Stage1/Add Clothes Pop Up Window (Mobile Version).png" /></div><br>
+<div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Stage1/Add Clothes Pop Up Window (Mobile Version).png" /></div><br><br><br><br><br>
 
 **Images (Stage 2)**
 
