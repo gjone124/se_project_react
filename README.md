@@ -24,13 +24,13 @@ Sprint 14 and 15 connects the front end and back end applications to each other.
 
 **Stage 1 (Sprint 10)**
 
-Terminal Scripts Needed To Run Stage 1 Program:
+Terminal Scripts Needed To Run Stage 1 (Sprint 10) Program:
 
 1)npm run dev
 
-For the 1st stage of the project in Sprint 10 (Introduction to React.js), we were given an adaptive web design through figma.com ( [link to Stage 1 Figma](https://www.figma.com/file/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR) ) and we were told to replicate the web page from scratch using HTML, CSS, and JSX.
+For the 1st stage of the project in Sprint 10 (Introduction to React.js), we were given an adaptive web design through figma.com ( [link to Stage 1 (Sprint 10) Figma](https://www.figma.com/file/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR) ) and we were told to replicate the web page from scratch using HTML, CSS, and JSX.
 
-The first stage involves:
+The first stage (Sprint 10) involves:
 
 1)calling weather information from the OpenWeather API
 
@@ -54,15 +54,15 @@ The first stage involves:
 
 **Stage 2 (Sprint 11)**
 
-Terminal Scripts Needed To Run Stage 2 Program:
+Terminal Scripts Needed To Run Stage 2 (Sprint 11) Program:
 
 1)npm run dev (in 1st terminal)
 
 2)json-server --watch db.json --id \_id --port 3001 (in 2nd terminal)
 
-For the 2nd stage of the project in Sprint 11 (React Routing and State Management), we were given a 2nd design (which added onto the previous design) through figma.com ( [link to Stage 2 Figma](https://www.figma.com/design/dQLJwEKasIdspciJAJrCaf/Sprint-11_-WTWR) ) and we were told to replicate it.
+For the 2nd stage of the project in Sprint 11 (React Routing and State Management), we were given a 2nd design (which added onto the previous design) through figma.com ( [link to Stage 2 (Sprint 11) Figma](https://www.figma.com/design/dQLJwEKasIdspciJAJrCaf/Sprint-11_-WTWR) ) and we were told to replicate it.
 
-The second stage involves:
+The second stage (Sprint 11) involves:
 
 1)adding functionality to add & remove pieces of clothing from the collection displayed
 
@@ -88,9 +88,9 @@ The second stage involves:
 
 - [Link to the project on Figma for Stage 2 (Sprint 11)](https://www.figma.com/design/dQLJwEKasIdspciJAJrCaf/Sprint-11_-WTWR)
 
-**Images (Stage 1)**
+**Images (Stage 1 / Sprint 10)**
 
-Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST, 11/14/2024:
+Here are ten screenshots of the project (as of Stage 1 / Sprint 10) taken around 6:30pm EST, 11/14/2024:
 
 1)Asunción, Paraguay (nighttime, clear, warm)
 
@@ -132,37 +132,37 @@ Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST,
 
 <div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Stage 1 (Sprint 10)/Add Clothes Pop Up Window (Mobile Version).png" /></div><br><br><br><br><br>
 
-**Images (Stage 2)**
+**Images (Stage 2 / Sprint 11)**
 
-Here are seven screenshots of the project (as of Stage 2):
+Here are seven screenshots of the project (as of Stage 2 / Sprint 11):
 
 1)Main Component (Fahrenheit)
 
-<div display="flex"><img align="center" alt="Main Component (Fahrenheit)" src="./src/assets/screenshots/Stage2/Main Component (Fahrenheit).png" /></div><br>
+<div display="flex"><img align="center" alt="Main Component (Fahrenheit)" src="./src/assets/screenshots/Stage 2 (Sprint 11)/Main Component (Fahrenheit).png" /></div><br>
 
 2)Main Component (Celsius)
 
-<div display="flex"><img align="center" alt="Main Component (Celsius)" src="./src/assets/screenshots/Stage2/Main Component (Celsius).png" /></div><br>
+<div display="flex"><img align="center" alt="Main Component (Celsius)" src="./src/assets/screenshots/Stage 2 (Sprint 11)/Main Component (Celsius).png" /></div><br>
 
 3)Clothing Item Pop-Up Window (Delete Item Button Added)
 
-<div display="flex"><img align="center" alt="Clothing Item Pop-Up Window" src="./src/assets/screenshots/Stage2/Clothing Item Pop-Up Window.png" /></div><br>
+<div display="flex"><img align="center" alt="Clothing Item Pop-Up Window" src="./src/assets/screenshots/Stage 2 (Sprint 11)/Clothing Item Pop-Up Window.png" /></div><br>
 
 4)Delete Item Confirmation Pop-Up Window
 
-<div display="flex"><img align="center" alt="Delete Item Confirmation Pop-Up Window" src="./src/assets/screenshots/Stage2/Delete Item Confirmation Pop-Up Window.png" /></div><br>
+<div display="flex"><img align="center" alt="Delete Item Confirmation Pop-Up Window" src="./src/assets/screenshots/Stage 2 (Sprint 11)/Delete Item Confirmation Pop-Up Window.png" /></div><br>
 
 5)Profile Component (Desktop Version)
 
-<div display="flex"><img align="center" alt="Profile Component (Desktop Version)" src="./src/assets/screenshots/Stage2/Profile Component (Desktop Version).png" /></div><br>
+<div display="flex"><img align="center" alt="Profile Component (Desktop Version)" src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Desktop Version).png" /></div><br>
 
 6)Main Component (Mobile Version)
 
-<div display="flex"><img align="center" alt="Main Component (Mobile Version)" src="./src/assets/screenshots/Stage2/Main Component (Mobile Version).png" /></div><br>
+<div display="flex"><img align="center" alt="Main Component (Mobile Version)" src="./src/assets/screenshots/Stage 2 (Sprint 11)/Main Component (Mobile Version).png" /></div><br>
 
 7)Profile Component (Mobile Version)
 
-<div display="flex"><img align="center" alt="Profile Component (Mobile Version)" src="./src/assets/screenshots/Stage2/Profile Component (Mobile Version).png" /></div><br>
+<div display="flex"><img align="center" alt="Profile Component (Mobile Version)" src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Version).png" /></div><br>
 
 **Tech Used**
 
@@ -187,7 +187,7 @@ Here are seven screenshots of the project (as of Stage 2):
 
 This webpage is deployed to GitHub Pages.
 
--Deployment Link (as of Stage 1): https://gjone124.github.io/se_project_react/
+-Deployment Link (as of Stage 1 / Sprint 10): https://gjone124.github.io/se_project_react/
 
 **Link To Back End Application Of This Project**
 
