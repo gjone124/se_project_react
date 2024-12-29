@@ -189,6 +189,6 @@ This webpage is deployed to GitHub Pages.
 
 -Deployment Link (as of Stage 1 / Sprint 10): https://gjone124.github.io/se_project_react/
 
-**Link To Back End Application Of This Project**
+<br>**Link To Back End Application Of This Project**
 
 https://github.com/gjone124/se_project_express
