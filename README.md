@@ -94,43 +94,43 @@ Here are ten screenshots of the project (as of Stage 1) taken around 6:30pm EST,
 
 1)Asunción, Paraguay (nighttime, clear, warm)
 
-<div display="flex"><img align="center" alt="Asuncion, Paraguay" src="./src/assets/screenshots/Stage1/Asuncion, Paraguay.png" /></div><br>
+<div display="flex"><img align="center" alt="Asuncion, Paraguay" src="./src/assets/screenshots/Stage 1 (Sprint 10)/Asuncion, Paraguay.png" /></div><br>
 
 2)Bethel, Alaska, USA (daytime, snowy, cold)
 
-<div display="flex"><img align="center" alt="Bethel, Alaska, USA" src="./src/assets/screenshots/Stage1/Bethel, Alaska, USA.png" /></div><br>
+<div display="flex"><img align="center" alt="Bethel, Alaska, USA" src="./src/assets/screenshots/Stage 1 (Sprint 10)/Bethel, Alaska, USA.png" /></div><br>
 
 3)Julia Creek, Queensland, Australia (daytime, cloudy, hot)
 
-<div display="flex"><img align="center" alt="Julia Creek, Queensland, Australia" src="./src/assets/screenshots/Stage1/Julia Creek, Queensland, Australia.png" /></div><br>
+<div display="flex"><img align="center" alt="Julia Creek, Queensland, Australia" src="./src/assets/screenshots/Stage 1 (Sprint 10)/Julia Creek, Queensland, Australia.png" /></div><br>
 
 4)Washington, DC, USA (nighttime, rainy, cold)
 
-<div display="flex"><img align="center" alt="Washington, DC, USA" src="./src/assets/screenshots/Stage1/Washington, DC, USA.png" /></div><br>
+<div display="flex"><img align="center" alt="Washington, DC, USA" src="./src/assets/screenshots/Stage 1 (Sprint 10)/Washington, DC, USA.png" /></div><br>
 
 5)Card Pop Up Window (Desktop Version)
 
-<div display="flex"><img align="center" alt="Card Pop Up Window (Desktop Version)" src="./src/assets/screenshots/Stage1/Card Pop Up Window (Desktop Version).png" /></div><br>
+<div display="flex"><img align="center" alt="Card Pop Up Window (Desktop Version)" src="./src/assets/screenshots/Stage 1 (Sprint 10)/Card Pop Up Window (Desktop Version).png" /></div><br>
 
 6)Add Clothes Pop Up Window (Desktop Version)
 
-<div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Desktop Version)" src="./src/assets/screenshots/Stage1/Add Clothes Pop Up Window (Desktop Version).png" /></div><br>
+<div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Desktop Version)" src="./src/assets/screenshots/Stage 1 (Sprint 10)/Add Clothes Pop Up Window (Desktop Version).png" /></div><br>
 
 7)Menu Closed (Mobile Version)
 
-<div display="flex"><img align="center" alt="Menu Closed (Mobile Version)" src="./src/assets/screenshots/Stage1/Menu Closed (Mobile Version).png" /></div><br>
+<div display="flex"><img align="center" alt="Menu Closed (Mobile Version)" src="./src/assets/screenshots/Stage 1 (Sprint 10)/Menu Closed (Mobile Version).png" /></div><br>
 
 8)Menu Open (Mobile Version)
 
-<div display="flex"><img align="center" alt="Menu Open (Mobile Version)" src="./src/assets/screenshots/Stage1/Menu Open (Mobile Version).png" /></div><br>
+<div display="flex"><img align="center" alt="Menu Open (Mobile Version)" src="./src/assets/screenshots/Stage 1 (Sprint 10)/Menu Open (Mobile Version).png" /></div><br>
 
 9)Card Pop Up Window (Mobile Version)
 
-<div display="flex"><img align="center" alt="Card Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Stage1/Card Pop Up Window (Mobile Version).png" /></div><br>
+<div display="flex"><img align="center" alt="Card Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Stage 1 (Sprint 10)/Card Pop Up Window (Mobile Version).png" /></div><br>
 
 10)Add Clothes Pop Up Window (Mobile Version)
 
-<div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Stage1/Add Clothes Pop Up Window (Mobile Version).png" /></div><br><br><br><br><br>
+<div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Mobile Version)" src="./src/assets/screenshots/Stage 1 (Sprint 10)/Add Clothes Pop Up Window (Mobile Version).png" /></div><br><br><br><br><br>
 
 **Images (Stage 2)**
 
