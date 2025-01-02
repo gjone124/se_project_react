@@ -2,11 +2,18 @@ import { Link } from "react-router-dom";
 
 import wtwrLogo from "../../assets/wtwr-logo.svg";
 import avatar from "../../assets/avatar.svg";
-import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch.jsx";
 
 import "./Header.css";
 
-function Header({ onAddClothes, weatherData, isMenuOpen, onMenuOpen }) {
+function Header({
+  onAddClothes,
+  weatherData,
+  isMenuOpen,
+  onMenuOpen,
+  onRegister,
+  onLogin,
+}) {
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
@@ -49,6 +56,20 @@ function Header({ onAddClothes, weatherData, isMenuOpen, onMenuOpen }) {
           onClick={onAddClothes}
         >
           + Add clothes
+        </button>
+        <button
+          type="button"
+          className={`header__clothes-button`}
+          onClick={onLogin}
+        >
+          Log In
+        </button>
+        <button
+          type="button"
+          className={`header__clothes-button`}
+          onClick={onRegister}
+        >
+          Sign Up
         </button>
         <ToggleSwitch isMenuOpen={isMenuOpen} />
       </div>

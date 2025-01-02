@@ -1,26 +1,26 @@
+// React elements
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
+// Components
 import Header from "../Header/Header.jsx";
+import RegisterModal from "../RegisterModal/RegisterModal.jsx";
+import LoginModal from "../LoginModal/LoginModal.jsx";
+import AddItemModal from "../AddItemModal/AddItemModal.jsx";
 import Main from "../Main/Main.jsx";
-import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import ItemModal from "../ItemModal/ItemModal.jsx";
 import DeleteModal from "../DeleteModal/DeleteModal.jsx";
-import Footer from "../Footer/Footer.jsx";
-import AddItemModal from "../AddItemModal/AddItemModal.jsx";
 import Profile from "../Profile/Profile.jsx";
+import Footer from "../Footer/Footer.jsx";
 
+// Utlities
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext.js";
-
 import { getWeatherData, filterWeatherData } from "../../utils/weatherApi.js";
 import { getItems, postItem, deleteItem } from "../../utils/api.js";
 
-import {
-  coordinates,
-  APIkey,
-  defaultClothingItems,
-} from "../../utils/constants.js";
+import { coordinates, APIkey } from "../../utils/constants.js";
 
+// Styling for App.jsx
 import "./App.css";
 
 // App component includes Header, Main, Profile, Footer,
@@ -98,6 +98,16 @@ function App() {
     handleSubmit(deleteRequest);
   }
 
+  function handleRegisterClick() {
+    console.log("clicked on sign up");
+    setActiveModal("registration-form");
+  }
+
+  function handleLoginClick() {
+    console.log("clicked on log in");
+    setActiveModal("login-form");
+  }
+
   // get weather
   useEffect(() => {
     getWeatherData(coordinates, APIkey)
@@ -127,6 +137,8 @@ function App() {
           weatherData={weatherData}
           isMenuOpen={isMobileMenuOpened}
           onMenuOpen={toggleMobileMenu}
+          onRegister={handleRegisterClick}
+          onLogin={handleLoginClick}
         />
         <Routes>
           <Route
@@ -173,6 +185,20 @@ function App() {
         onAddItem={onAddItem}
         onClose={onClose}
         onDelete={onDeleteItem}
+      />
+      <RegisterModal
+        name="registration-form"
+        onClose={onClose}
+        onOpen={onOpen}
+        // onRegister={onRegister}
+        activeModal={activeModal}
+      />
+      <LoginModal
+        name="login-form"
+        onClose={onClose}
+        onOpen={onOpen}
+        // onLogin={onLogin}
+        activeModal={activeModal}
       />
     </div>
   );
