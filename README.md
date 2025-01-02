@@ -75,10 +75,6 @@ Stage 5 (Sprint 14) (see se_project_express for Stage 3 & 4)
 
 **Stage 1 (Sprint 10)**
 
-Terminal Scripts Needed To Run Stage 1 (Sprint 10) Program:
-
-1)npm run dev
-
 For the 1st stage of the project in Sprint 10 (Introduction to React.js), we were given an adaptive web design through
 figma.com ( [link to Stage 1 (Sprint 10) Figma](https://www.figma.com/file/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR) )
 and we were told to replicate the web page from scratch using HTML, CSS, and JSX.
@@ -291,75 +287,75 @@ src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Vers
 - Interaction between front end application and back end application
 - Full stack application
 
-**Chart of Class Inheritance Structure** (add in EditProfileModal, ProtectedRoute, & auth.js when complete)
-1)index.html (46 unique files; 9 unique files reused; 67 instances of files being used; 47 images not included in chart)
+**Chart of Class Inheritance Structure** (add in EditProfileModal, ProtectedRoute, & auth.js when complete; 46 unique files; 9 unique files reused; 67 instances of files being used; 47 images not included in chart)
 
-- A)main.jsx
-  - I)App.jsx
-    - a)App.css
-    - b)Header.jsx
-      - 1)Header.css
-      - 2)ToggleSwitch.jsx
-        - A)ToggleSwitch.css
-        - B)CurrentTemperatureUnitContext.js (1st time file is imported)
-    - c)RegisterModal.jsx
-      - 1)RegisterModal.css (empty currently)
-      - 2)ModalWithForm.jsx (1st time file is imported)
-        - A)ModalWithForm.css (1st time file is imported)
-        - B)Modal.jsx (1st time file is imported)
-          - I)Modal.css (1st time file is imported)
-    - d)LoginModal.jsx
-      - 1)LoginModal.css (empty currently)
-      - 2)ModalWithForm.jsx (2nd time file is imported)
-        - A)ModalWithForm.css (2nd time file is imported)
-        - B)Modal.jsx (2nd time file is imported)
-          - I)Modal.css (2nd time file is imported)
-    - e)AddItemModal.jsx
-      - 1)AddItemModal.css (empty currently)
-      - 2)ModalWithForm.jsx (3rd time file is imported)
-        - A)ModalWithForm.css (3rd time file is imported)
-        - B)Modal.jsx (3rd time file is imported)
-          - I)Modal.css (3rd time file is imported)
-    - f)Main.jsx
-      - 1)Main.css
-      - 2)WeatherCard.jsx
-        - A)WeatherCard.css
-        - B)CurrentTemperatureUnitContext.js (2nd time file is imported)
-        - C)constants.js (1st time file is imported)
-      - 3)ItemCard.jsx (1st time file is imported)
-        - A)ItemCard.css (1st time file is imported)
-      - 4)CurrentTemperatureUnitContext.js (3rd time file is imported)
-    - g)ItemModal.jsx
-      - 1)ItemModal.css
-      - 2)Modal.jsx (4th time file is imported)
-        - A)Modal.css (4th time file is imported)
-    - h)DeleteModal.jsx
-      - 1)DeleteModal.css
-      - 2)Modal.jsx (5th time file is imported)
-        - A)Modal.css (5th time file is imported)
-    - i)Profile.jsx
-      - 1)Profile.css
-      - 2)SideBar.jsx
-        - A)SideBar.css
-      - 3)ClothesSection.jsx
-        - A)ClothesSection.css
-        - B)ItemCard.jsx (2nd time file is imported)
-          - I)ItemCard.css (2nd time file is imported)
-    - j)Footer.jsx
-      - 1)Footer.css
-    - k)CurrentTemperatureUnitContext.js (4th time file is imported)
-    - l)api.js (1st time file is imported)
-      - 1)constants.js (2nd time file is imported)
-    - m)weatherApi.js
-      - 1)api.js (2nd time file is imported)
-        - A)constants.js (3rd time file is imported)
-    - n)constants.js (4th time file is imported)
-  - II)index.css
-    - a)normalize.css
-    - b)fonts.css
-      - 1)CabinetGrotesk-Black.otf
-      - 2)CabinetGrotesk-Bold.otf
-      - 3)CabinetGrotesk-Medium.otf
+- 1)index.html
+  - A)main.jsx
+    - I)App.jsx
+      - a)App.css
+      - b)Header.jsx
+        - 1)Header.css
+        - 2)ToggleSwitch.jsx
+          - A)ToggleSwitch.css
+          - B)CurrentTemperatureUnitContext.js (1st time file is imported)
+      - c)RegisterModal.jsx
+        - 1)RegisterModal.css (empty currently)
+        - 2)ModalWithForm.jsx (1st time file is imported)
+          - A)ModalWithForm.css (1st time file is imported)
+          - B)Modal.jsx (1st time file is imported)
+            - I)Modal.css (1st time file is imported)
+      - d)LoginModal.jsx
+        - 1)LoginModal.css (empty currently)
+        - 2)ModalWithForm.jsx (2nd time file is imported)
+          - A)ModalWithForm.css (2nd time file is imported)
+          - B)Modal.jsx (2nd time file is imported)
+            - I)Modal.css (2nd time file is imported)
+      - e)AddItemModal.jsx
+        - 1)AddItemModal.css (empty currently)
+        - 2)ModalWithForm.jsx (3rd time file is imported)
+          - A)ModalWithForm.css (3rd time file is imported)
+          - B)Modal.jsx (3rd time file is imported)
+            - I)Modal.css (3rd time file is imported)
+      - f)Main.jsx
+        - 1)Main.css
+        - 2)WeatherCard.jsx
+          - A)WeatherCard.css
+          - B)CurrentTemperatureUnitContext.js (2nd time file is imported)
+          - C)constants.js (1st time file is imported)
+        - 3)ItemCard.jsx (1st time file is imported)
+          - A)ItemCard.css (1st time file is imported)
+        - 4)CurrentTemperatureUnitContext.js (3rd time file is imported)
+      - g)ItemModal.jsx
+        - 1)ItemModal.css
+        - 2)Modal.jsx (4th time file is imported)
+          - A)Modal.css (4th time file is imported)
+      - h)DeleteModal.jsx
+        - 1)DeleteModal.css
+        - 2)Modal.jsx (5th time file is imported)
+          - A)Modal.css (5th time file is imported)
+      - i)Profile.jsx
+        - 1)Profile.css
+        - 2)SideBar.jsx
+          - A)SideBar.css
+        - 3)ClothesSection.jsx
+          - A)ClothesSection.css
+          - B)ItemCard.jsx (2nd time file is imported)
+            - I)ItemCard.css (2nd time file is imported)
+      - j)Footer.jsx
+        - 1)Footer.css
+      - k)CurrentTemperatureUnitContext.js (4th time file is imported)
+      - l)api.js (1st time file is imported)
+        - 1)constants.js (2nd time file is imported)
+      - m)weatherApi.js
+        - 1)api.js (2nd time file is imported)
+          - A)constants.js (3rd time file is imported)
+      - n)constants.js (4th time file is imported)
+    - II)index.css
+      - a)normalize.css
+      - b)fonts.css
+        - 1)CabinetGrotesk-Black.otf
+        - 2)CabinetGrotesk-Bold.otf
+        - 3)CabinetGrotesk-Medium.otf
 
 **Deployment**
 
