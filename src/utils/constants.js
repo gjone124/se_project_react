@@ -103,5 +103,8 @@ export const coordinates = {
 };
 
 export const APIkey = "d8633e85ba6b4c163ec058a7b0364964";
+
+// se_project_express is running on port 3001 so this connects
+// the 2 projects wherever baseUrl is referenced (se_project_react is running on port 3000)
 export const baseUrl = "http://localhost:3001";
 export const header = { "Content-Type": "application/json" };

@@ -18,7 +18,7 @@ const LoginModal = ({ name, onClose, onLogin, activeModal, onOpen }) => {
   // method handles when user clicks on "Log In" submit button within "Log In" form
   const handleLoginSubmit = (event) => {
     event.preventDefault();
-    console.log("submitted");
+    console.log("login submitted");
   };
 
   return (
@@ -27,7 +27,7 @@ const LoginModal = ({ name, onClose, onLogin, activeModal, onOpen }) => {
       onClose={onClose}
       activeModal={activeModal}
       title="Log In"
-      buttonText="Log In"
+      // buttonText="Log In"
       onOpen={onOpen}
       onSubmit={handleLoginSubmit}
     >
@@ -56,6 +56,18 @@ const LoginModal = ({ name, onClose, onLogin, activeModal, onOpen }) => {
           required
         />
       </label>
+
+      <div>
+        <button type="submit">Log In</button>
+
+        <button
+          type="button"
+          className={`header__clothes-button`}
+          onClick={() => console.log("or Sign Up button clicked")}
+        >
+          or Sign Up
+        </button>
+      </div>
     </ModalWithForm>
   );
 };

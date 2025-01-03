@@ -25,11 +25,11 @@ const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
     setAvatarUrl(event.target.value);
   };
 
-  // method handles when user clicks on "Sign Up" submit button within "Sign Up" form
-  const handleRegisterSubmit = (event) => {
+  // method handles when user clicks on "Sign Up" submit butjton within "Sign Up" form
+  const onSubmit = (event) => {
     event.preventDefault();
     onRegister({ email, password, username, avatarUrl });
-    console.log("submitted");
+    console.log("registration submitted from RegisterModal.jsx");
   };
 
   return (
@@ -40,7 +40,7 @@ const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
       title="Sign Up"
       buttonText="Sign Up"
       onOpen={onOpen}
-      onSubmit={handleRegisterSubmit}
+      onSubmit={onSubmit}
     >
       <label htmlFor="email" className="modal-form__label">
         Email*
@@ -93,6 +93,14 @@ const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
           required
         />
       </label>
+
+      <button
+        type="button"
+        className={`header__clothes-button`}
+        onClick={() => console.log("Login button clicked")}
+      >
+        or Log In
+      </button>
     </ModalWithForm>
   );
 };

@@ -17,8 +17,8 @@ import Footer from "../Footer/Footer.jsx";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext.js";
 import { getWeatherData, filterWeatherData } from "../../utils/weatherApi.js";
 import { getItems, postItem, deleteItem } from "../../utils/api.js";
-
 import { coordinates, APIkey } from "../../utils/constants.js";
+import { registerUser } from "../../utils/auth.js";
 
 // Styling for App.jsx
 import "./App.css";
@@ -127,6 +127,22 @@ function App() {
       .catch(console.error);
   }, []);
 
+  const handleRegisterModalSubmit = ({
+    email,
+    password,
+    username,
+    avatarUrl,
+  }) => {
+    console.log("registration submitted from App.jsx");
+    return registerUser({ email, password, username, avatarUrl }).then(() => {
+      onClose();
+    });
+    // user press button -> request to the API -> save in DB -> return response; API request should be here
+    // call postRegister and do some next stuff in the .then function
+  };
+
+  const handleLoginModalSubmit = () => {};
+
   return (
     <div className="page">
       <CurrentTemperatureUnitContext.Provider
@@ -190,7 +206,7 @@ function App() {
         name="registration-form"
         onClose={onClose}
         onOpen={onOpen}
-        // onRegister={onRegister}
+        onRegister={handleRegisterModalSubmit}
         activeModal={activeModal}
       />
       <LoginModal
