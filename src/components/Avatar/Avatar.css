@@ -1,0 +1,10 @@
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.avatar.side-bar__avatar {
+  width: 56px;
+  height: 56px;
+}

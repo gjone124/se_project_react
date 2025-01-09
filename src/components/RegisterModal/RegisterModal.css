@@ -1,1 +1,19 @@
 /* file added for Sprint 14 */
+
+.register-modal__or-login-button {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  background: none;
+  border: none;
+  align-content: center;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  left: 100px;
+  top: 62px;
+  color: rgba(0, 0, 0, 0.5);
+}

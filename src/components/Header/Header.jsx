@@ -4,7 +4,11 @@ import wtwrLogo from "../../assets/wtwr-logo.svg";
 import avatar from "../../assets/avatar.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch.jsx";
 
+import { useContext } from "react";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
+
 import "./Header.css";
+import Avatar from "../Avatar/Avatar.jsx";
 
 function Header({
   onAddClothes,
@@ -18,6 +22,8 @@ function Header({
     month: "long",
     day: "numeric",
   });
+
+  const { currentUser, isLoggedIn } = useContext(CurrentUserContext);
 
   return (
     <header className="header">
@@ -38,39 +44,56 @@ function Header({
           }`}
           onClick={onMenuOpen}
         ></button>
-        <Link to="/profile" className="header__link">
-          <div
-            className={`header__user ${
-              !isMenuOpen ? "header__user_type_menu-closed" : ""
-            }`}
-          >
-            <p className="header__name">Terrence Tegegne</p>
-            <img src={avatar} alt="default avatar" className="header__avatar" />
-          </div>
-        </Link>
-        <button
-          type="button"
-          className={`header__clothes-button ${
-            !isMenuOpen ? "header__clothes-button_type_menu-closed" : ""
-          }`}
-          onClick={onAddClothes}
-        >
-          + Add clothes
-        </button>
-        <button
-          type="button"
-          className={`header__clothes-button`}
-          onClick={onLogin}
-        >
-          Log In
-        </button>
-        <button
-          type="button"
-          className={`header__clothes-button`}
-          onClick={onRegister}
-        >
-          Sign Up
-        </button>
+
+        {/* conditional rendering & fragment used to display necessary buttons when LOGGED IN (added for Sprint 14) */}
+        {isLoggedIn && (
+          <>
+            <Link to="/profile" className="header__link">
+              <div
+                className={`header__user ${
+                  !isMenuOpen ? "header__user_type_menu-closed" : ""
+                }`}
+              >
+                <p className="header__name">
+                  {currentUser?.name || "Terrence Tegegne"}
+                </p>
+                <Avatar />
+              </div>
+            </Link>
+            <button
+              type="button"
+              className={`header__clothes-button ${
+                !isMenuOpen ? "header__clothes-button_type_menu-closed" : ""
+              }`}
+              onClick={onAddClothes}
+            >
+              + Add clothes
+            </button>
+          </>
+        )}
+
+        {/* conditional rendering & fragment used to display necessary buttons when NOT logged in (added for Sprint 14) */}
+        {!isLoggedIn && (
+          <>
+            {/* button added for Sprint 14 */}
+            <button
+              type="button"
+              className={`header__clothes-button`}
+              onClick={onLogin}
+            >
+              Log In
+            </button>
+
+            {/* button added for Sprint 14 */}
+            <button
+              type="button"
+              className={`header__clothes-button`}
+              onClick={onRegister}
+            >
+              Sign Up
+            </button>
+          </>
+        )}
         <ToggleSwitch isMenuOpen={isMenuOpen} />
       </div>
     </header>

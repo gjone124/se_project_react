@@ -126,7 +126,7 @@ Celsius to Fahrenheit
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a)1 for the Main component ("/"; accessed by clicking in the top left corner on
 the "WTWR" logo)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)1 for the Profile component ("/Profile"; accessed by clicking in the tope right
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)1 for the Profile component ("/Profile"; accessed by clicking in the top right
 corner on the username (Terrence Tegegne) or the user logo)
 
 6)creating a mobile version of the Profile component (optional)
@@ -142,26 +142,28 @@ to replicate it.
 
 The fifth stage (Sprint 14) involves modifying se_project_react (the front end application) by:
 
-1)having the default route display buttons for "Sign Up" & "Log In"
+1)creating 2 buttons in the header for "Sign Up" & "Log In"
 
 2)creating a pop up window for registering a user when a user clicks on "Sign Up"
 
 3)creating a 2nd pop up window for logging in a user when a user clicks on "Log In"
 (a user must already be registered in order to log in)
 
-4)after a user successfully logs in, route the web page to display the add clothes button, username, & username logo
+4)if a user is NOT logged in, route the web page to display the temperature toggle switch & buttons for "Sign Up" & "Log In"
 
-5)implementing registration & authorization logic
+5)if a user is logged in, route the web page to display the temperature toggle switch, the add clothes button, username, & username logo
 
-6)for the profile view, implement buttons for "Change profile data" & "Log out"
+6)implementing registration & authorization logic
 
-7)implementing edit profile logic
+7)for the profile view, implement buttons for "Change profile data" & "Log out"
 
-8)implementing like button for each card
+8)implementing edit profile logic
 
-9)implementing like & dislike functionality for each card
+9)implementing like button for each card
 
-10)implementing "sign out" (or "log out") functionality
+10)implementing like & dislike functionality for each card
+
+11)implementing "sign out" (or "log out") functionality
 
 **Figma**
 
@@ -287,7 +289,7 @@ src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Vers
 - Interaction between front end application and back end application
 - Full stack application
 
-**Chart of Class Inheritance Structure** (add in EditProfileModal, ProtectedRoute, & auth.js when complete; 46 unique files; 9 unique files reused; 67 instances of files being used; 47 images not included in chart)
+**Chart of Class Inheritance Structure** (add in EditProfileModal, ProtectedRoute, Avatar, & auth.js when complete; 46 unique files; 9 unique files reused; 67 instances of files being used; 47 images not included in chart)
 
 - 1)index.html
   - A)main.jsx

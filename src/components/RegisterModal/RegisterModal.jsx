@@ -5,30 +5,46 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import "./RegisterModal.css";
 
 const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
-  const [email, setEmail] = useState("");
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+  const [userData, setUserData] = useState({
+    email: "",
+    password: "",
+    username: "",
+    avatarUrl: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setUserData((previousUserData) => ({
+      ...previousUserData,
+      [name]: value,
+    }));
   };
 
-  const [password, setPassword] = useState("");
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
+  // const [email, setEmail] = useState("");
+  // const handleEmailChange = (event) => {
+  //   setEmail(event.target.value);
+  // };
 
-  const [username, setUsername] = useState("");
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
-  };
+  // const [password, setPassword] = useState("");
+  // const handlePasswordChange = (event) => {
+  //   setPassword(event.target.value);
+  // };
 
-  const [avatarUrl, setAvatarUrl] = useState("");
-  const handleAvatarUrlChange = (event) => {
-    setAvatarUrl(event.target.value);
-  };
+  // const [username, setUsername] = useState("");
+  // const handleUsernameChange = (event) => {
+  //   setUsername(event.target.value);
+  // };
 
-  // method handles when user clicks on "Sign Up" submit butjton within "Sign Up" form
-  const onSubmit = (event) => {
+  // const [avatarUrl, setAvatarUrl] = useState("");
+  // const handleAvatarUrlChange = (event) => {
+  //   setAvatarUrl(event.target.value);
+  // };
+
+  // method handles when user clicks on "Sign Up" submit button within "Sign Up" form
+  const handleRegisterModalSubmit = (event) => {
     event.preventDefault();
-    onRegister({ email, password, username, avatarUrl });
+    onRegister(userData);
+    onClose();
     console.log("registration submitted from RegisterModal.jsx");
   };
 
@@ -40,17 +56,18 @@ const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
       title="Sign Up"
       buttonText="Sign Up"
       onOpen={onOpen}
-      onSubmit={onSubmit}
+      onSubmit={handleRegisterModalSubmit}
     >
       <label htmlFor="email" className="modal-form__label">
         Email*
         <input
           type="email"
+          name="email"
           className="modal-form__input"
           id="email"
           placeholder="Email"
-          value={email}
-          onChange={handleEmailChange}
+          value={userData.email}
+          onChange={handleChange}
           required
         />
       </label>
@@ -59,11 +76,12 @@ const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
         Password*
         <input
           type="password"
+          name="password"
           className="modal-form__input"
           id="password"
           placeholder="Password"
-          value={password}
-          onChange={handlePasswordChange}
+          value={userData.password}
+          onChange={handleChange}
           required
         />
       </label>
@@ -72,32 +90,34 @@ const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
         Name*
         <input
           type="text"
+          name="username"
           className="modal-form__input"
           id="username"
           placeholder="Name"
-          value={username}
-          onChange={handleUsernameChange}
+          value={userData.username}
+          onChange={handleChange}
           required
         />
       </label>
 
       <label htmlFor="avatarUrl" className="modal-form__label">
-        Avatar URL*
+        Avatar URL
         <input
           type="url"
+          name="avatarUrl"
           className="modal-form__input"
           id="avatarUrl"
           placeholder="Avatar URL"
-          value={avatarUrl}
-          onChange={handleAvatarUrlChange}
-          required
+          value={userData.avatarUrl}
+          onChange={handleChange}
+          required // (comment out if no avatar provided)
         />
       </label>
 
       <button
         type="button"
-        className={`header__clothes-button`}
-        onClick={() => console.log("Login button clicked")}
+        className="register-modal__or-login-button"
+        onClick={() => onOpen("login-form")}
       >
         or Log In
       </button>

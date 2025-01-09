@@ -5,19 +5,34 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import "./LoginModal.css";
 
 const LoginModal = ({ name, onClose, onLogin, activeModal, onOpen }) => {
-  const [email, setEmail] = useState("");
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+  const [userData, setUserData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setUserData((previousUserData) => ({
+      ...previousUserData,
+      [name]: value,
+    }));
   };
 
-  const [password, setPassword] = useState("");
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
+  // const [email, setEmail] = useState("");
+  // const handleEmailChange = (event) => {
+  //   setEmail(event.target.value);
+  // };
+
+  // const [password, setPassword] = useState("");
+  // const handlePasswordChange = (event) => {
+  //   setPassword(event.target.value);
+  // };
 
   // method handles when user clicks on "Log In" submit button within "Log In" form
-  const handleLoginSubmit = (event) => {
+  const handleLoginModalSubmit = (event) => {
     event.preventDefault();
+    onLogin(userData);
+    onClose();
     console.log("login submitted");
   };
 
@@ -27,19 +42,20 @@ const LoginModal = ({ name, onClose, onLogin, activeModal, onOpen }) => {
       onClose={onClose}
       activeModal={activeModal}
       title="Log In"
-      // buttonText="Log In"
+      buttonText="Log In"
       onOpen={onOpen}
-      onSubmit={handleLoginSubmit}
+      onSubmit={handleLoginModalSubmit}
     >
       <label htmlFor="email" className="modal-form__label">
         Email
         <input
           type="email"
+          name="email"
           className="modal-form__input"
           id="email"
           placeholder="Email"
-          value={email}
-          onChange={handleEmailChange}
+          value={userData.email}
+          onChange={handleChange}
           required
         />
       </label>
@@ -48,26 +64,23 @@ const LoginModal = ({ name, onClose, onLogin, activeModal, onOpen }) => {
         Password
         <input
           type="password"
+          name="password"
           className="modal-form__input"
           id="password"
           placeholder="Password"
-          value={password}
-          onChange={handlePasswordChange}
+          value={userData.password}
+          onChange={handleChange}
           required
         />
       </label>
 
-      <div>
-        <button type="submit">Log In</button>
-
-        <button
-          type="button"
-          className={`header__clothes-button`}
-          onClick={() => console.log("or Sign Up button clicked")}
-        >
-          or Sign Up
-        </button>
-      </div>
+      <button
+        type="button"
+        className="login-modal__or-sign-up-button"
+        onClick={() => onOpen("registration-form")}
+      >
+        or Sign Up
+      </button>
     </ModalWithForm>
   );
 };

@@ -18,7 +18,7 @@ function WeatherCard({ weatherData }) {
       <h1 className="weather-card__temperature">
         {weatherData.temp[currentTemperatureUnit]}&deg;{currentTemperatureUnit}
       </h1>
-      <img src={icon} alt="Sky" className="weather-card__icon" />
+      <img src={icon} alt="current weather" className="weather-card__icon" />
     </section>
   );
 }

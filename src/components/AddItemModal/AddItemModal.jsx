@@ -3,29 +3,52 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import "./AddItemModal.css";
 
 const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
-  const [name, setName] = useState("");
-  const handleNameChange = (event) => {
-    setName(event.target.value);
+  const [itemData, setItemData] = useState({
+    name: "",
+    link: "",
+    weatherType: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setItemData((previousItemData) => ({
+      ...previousItemData,
+      [name]: value,
+    }));
   };
 
-  const [link, setUrl] = useState("");
-  const handleUrlChange = (event) => {
-    setUrl(event.target.value);
-  };
+  // const [name, setName] = useState("");
+  // const handleNameChange = (event) => {
+  //   setName(event.target.value);
+  // };
 
-  const [weatherType, setWeatherType] = useState(""); // New state for weather type
-  const handleWeatherChange = (event) => {
-    setWeatherType(event.target.value); // Update weather type when radio button changes
-  };
+  // const [link, setUrl] = useState("");
+  // const handleUrlChange = (event) => {
+  //   setUrl(event.target.value);
+  // };
+
+  // const [weatherType, setWeatherType] = useState(""); // New state for weather type
+  // const handleWeatherChange = (event) => {
+  //   setWeatherType(event.target.value); // Update weather type when radio button changes
+  // };
 
   // add item to items array & reset form values
   const handleAddItemSubmit = (event) => {
     event.preventDefault();
-    onAddItem({ name, imageUrl: link, weather: weatherType })
+    onAddItem({
+      name: itemData.name,
+      imageUrl: itemData.link,
+      weather: itemData.weatherType,
+    })
       .then(() => {
-        setName("");
-        setUrl("");
-        setWeatherType("");
+        setItemData({
+          name: "",
+          link: "",
+          weatherType: "",
+        });
+        // setName("");
+        // setUrl("");
+        // setWeatherType("");
       })
       .catch(console.error);
   };
@@ -44,11 +67,12 @@ const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
         Name
         <input
           type="text"
+          name="name"
           className="modal-form__input"
           id="name"
           placeholder="Name"
-          value={name}
-          onChange={handleNameChange}
+          value={itemData.name}
+          onChange={handleChange}
           required
         />
       </label>
@@ -56,11 +80,12 @@ const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
         Image
         <input
           type="url"
+          name="link"
           className="modal-form__input"
           id="imageUrl"
           placeholder="Image URL"
-          value={link}
-          onChange={handleUrlChange}
+          value={itemData.link}
+          onChange={handleChange}
           required
         />
       </label>
@@ -74,10 +99,10 @@ const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
             type="radio"
             className="modal-form__radio-button"
             id="hot"
-            name="weather"
+            name="weatherType"
             value="hot"
-            checked={weatherType === "hot"}
-            onChange={handleWeatherChange}
+            checked={itemData.weatherType === "hot"}
+            onChange={handleChange}
             required
           />
           Hot
@@ -90,10 +115,10 @@ const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
             type="radio"
             className="modal-form__radio-button"
             id="warm"
-            name="weather"
+            name="weatherType"
             value="warm"
-            checked={weatherType === "warm"}
-            onChange={handleWeatherChange}
+            checked={itemData.weatherType === "warm"}
+            onChange={handleChange}
             required
           />
           Warm
@@ -106,10 +131,10 @@ const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
             type="radio"
             className="modal-form__radio-button"
             id="cold"
-            name="weather"
+            name="weatherType"
             value="cold"
-            checked={weatherType === "cold"}
-            onChange={handleWeatherChange}
+            checked={itemData.weatherType === "cold"}
+            onChange={handleChange}
             required
           />
           Cold

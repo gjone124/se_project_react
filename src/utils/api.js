@@ -1,4 +1,4 @@
-import { baseUrl, header } from "./constants.js";
+import { baseUrl } from "./constants.js";
 
 export function getItems() {
   return fetch(`${baseUrl}/items`).then(handleServerResponse);
@@ -12,14 +12,14 @@ export function postItem({ name, imageUrl, weather }) {
       imageUrl: imageUrl,
       weather: weather,
     }),
-    headers: header,
+    headers: { "Content-Type": "application/json" },
   }).then(handleServerResponse);
 }
 
 export function deleteItem(id) {
   return fetch(`${baseUrl}/items/${id}`, {
     method: "DELETE",
-    headers: header,
+    headers: { "Content-Type": "application/json" },
   }).then(handleServerResponse);
 }
 

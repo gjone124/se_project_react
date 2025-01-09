@@ -1,24 +1,38 @@
 // React elements
 import { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 // Components
 import Header from "../Header/Header.jsx";
+import Main from "../Main/Main.jsx";
+import Profile from "../Profile/Profile.jsx";
+import Footer from "../Footer/Footer.jsx";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute.jsx";
+
+// Modals (part of Components)
 import RegisterModal from "../RegisterModal/RegisterModal.jsx";
 import LoginModal from "../LoginModal/LoginModal.jsx";
 import AddItemModal from "../AddItemModal/AddItemModal.jsx";
-import Main from "../Main/Main.jsx";
 import ItemModal from "../ItemModal/ItemModal.jsx";
 import DeleteModal from "../DeleteModal/DeleteModal.jsx";
-import Profile from "../Profile/Profile.jsx";
-import Footer from "../Footer/Footer.jsx";
 
-// Utlities
+//("change profile data")
+import EditProfileModal from "../EditProfileModal/EditProfileModal.jsx";
+
+// Contexts
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext.js";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
+
+// Utilities
 import { getWeatherData, filterWeatherData } from "../../utils/weatherApi.js";
 import { getItems, postItem, deleteItem } from "../../utils/api.js";
-import { coordinates, APIkey } from "../../utils/constants.js";
-import { registerUser } from "../../utils/auth.js";
+import { coordinates, apiKey } from "../../utils/constants.js";
+import {
+  registerUser,
+  loginUser,
+  getCurrentUser,
+  editUserProfile,
+} from "../../utils/auth.js";
 
 // Styling for App.jsx
 import "./App.css";
@@ -38,6 +52,10 @@ function App() {
   const [clothingItems, setClothingItems] = useState([]);
   const [isMobileMenuOpened, setMobileMenuOpened] = useState(false);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Sprint 14
+  const [currentUser, setCurrentUser] = useState(null); // Sprint 14
+
+  const navigate = useNavigate(); // Sprint 14
 
   function onOpen(name) {
     setActiveModal(name);
@@ -98,19 +116,23 @@ function App() {
     handleSubmit(deleteRequest);
   }
 
+  // added for Sprint 14
   function handleRegisterClick() {
     console.log("clicked on sign up");
     setActiveModal("registration-form");
   }
 
+  // added for Sprint 14
   function handleLoginClick() {
     console.log("clicked on log in");
     setActiveModal("login-form");
   }
 
+  //Initial Data Loading (add get users using useEffect)
+
   // get weather
   useEffect(() => {
-    getWeatherData(coordinates, APIkey)
+    getWeatherData(coordinates, apiKey)
       .then((data) => {
         const filteredData = filterWeatherData(data);
         setWeatherData(filteredData);
@@ -127,96 +149,160 @@ function App() {
       .catch(console.error);
   }, []);
 
-  const handleRegisterModalSubmit = ({
-    email,
-    password,
-    username,
-    avatarUrl,
-  }) => {
-    console.log("registration submitted from App.jsx");
-    return registerUser({ email, password, username, avatarUrl }).then(() => {
-      onClose();
-    });
-    // user press button -> request to the API -> save in DB -> return response; API request should be here
-    // call postRegister and do some next stuff in the .then function
+  // when there is a successful registration, the user should be logged in (Sprint 14)
+  const handleRegistration = ({ email, password, username, avatarUrl }) => {
+    // user presses "Sign Up" button, request to API is sent, if successful registerUser is called to save it in database,
+    // response returned, handleLogin called to log in user
+    return registerUser({ email, password, username, avatarUrl }).then(
+      (response) => {
+        handleLogin({ email, password });
+      }
+    );
   };
 
-  const handleLoginModalSubmit = () => {};
+  // after you register user, you can check Mongo DB to see if user has been added
+  // & you can use Postman to get your current users & ensure user was added
+  // but would need to readd "getUsers" method implemented for Sprint 12
+  // but we were told to remove for Sprint 13
+
+  // log in the user (Sprint 14)
+  const handleLogin = ({ email, password }) => {
+    // call loginUser function from auth.js, then set localStorage token to response token,
+    // then change state of isLoggedIn to true,
+    // then check token of current user to make sure they are authorized,
+    // then set the current user to the current user
+    return loginUser({ email, password })
+      .then((data) => {
+        //"jwt" is the key that data.token is stored in
+        localStorage.setItem("jwt", data.token);
+        setIsLoggedIn(true);
+        return getCurrentUser(data.token);
+      })
+      .then((user) => {
+        setCurrentUser(user);
+      });
+  };
+
+  //("change profile data")
+  // edit user data (username or avatar) (Sprint 14)
+  const handleEditProfile = (profileData) => {
+    const token = localStorage.getItem("jwt");
+    editUserProfile(profileData, token).then((updatedUser) => {
+      setCurrentUser(updatedUser);
+    });
+  };
+
+  // log out functionality added for Sprint 14
+  const handleLogOut = () => {
+    localStorage.removeItem("jwt");
+    setIsLoggedIn(false);
+    setCurrentUser(null);
+    navigate("/");
+  };
 
   return (
-    <div className="page">
-      <CurrentTemperatureUnitContext.Provider
-        value={{ currentTemperatureUnit, handleToggleSwitchChange }}
-      >
-        <Header
-          onAddClothes={onAddClothes}
-          weatherData={weatherData}
-          isMenuOpen={isMobileMenuOpened}
-          onMenuOpen={toggleMobileMenu}
-          onRegister={handleRegisterClick}
-          onLogin={handleLoginClick}
-        />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Main
-                weatherData={weatherData}
-                onCardClick={onCardClick}
-                items={clothingItems}
-              />
-            }
+    //CurrentUserContext added for Sprint 14
+    <CurrentUserContext.Provider value={{ currentUser, isLoggedIn }}>
+      <div className="page">
+        <CurrentTemperatureUnitContext.Provider
+          value={{ currentTemperatureUnit, handleToggleSwitchChange }}
+        >
+          <Header
+            onAddClothes={onAddClothes}
+            weatherData={weatherData}
+            isMenuOpen={isMobileMenuOpened}
+            onMenuOpen={toggleMobileMenu}
+            onRegister={handleRegisterClick}
+            onLogin={handleLoginClick}
+            isLoggedIn={isLoggedIn}
           />
-          <Route
-            path="/profile"
-            element={
-              <Profile
-                onCardClick={onCardClick}
-                items={clothingItems}
-                onAddClothes={onAddClothes}
-              />
-            }
-          />
-        </Routes>
-      </CurrentTemperatureUnitContext.Provider>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Main
+                  weatherData={weatherData}
+                  onCardClick={onCardClick}
+                  items={clothingItems}
+                />
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                // protect profile route by creating wrapper component to redirect
+                // unauthorized users to main page
+                <ProtectedRoute isLoggedIn={isLoggedIn}>
+                  <Profile
+                    onCardClick={onCardClick}
+                    items={clothingItems}
+                    onAddClothes={onAddClothes}
+                    handleLogOut={handleLogOut}
+                    // ("change profile data") => setActiveModal passed as prop from App.jsx
+                    // to allow setActiveModal to be called within handleEditProfileClick
+                    // in Profile.jsx
+                    setActiveModal={setActiveModal}
+                  />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        </CurrentTemperatureUnitContext.Provider>
 
-      <Footer />
-      <AddItemModal
-        name="add-garment-form"
-        onClose={onClose}
-        onOpen={onOpen}
-        onAddItem={onAddItem}
-        activeModal={activeModal}
-      />
-      <ItemModal
-        name="preview"
-        onClose={onClose}
-        activeModal={activeModal}
-        item={selectedCard}
-        openDeleteModal={openDeleteModal}
-      />
-      <DeleteModal
-        name="delete"
-        activeModal={activeModal}
-        onAddItem={onAddItem}
-        onClose={onClose}
-        onDelete={onDeleteItem}
-      />
-      <RegisterModal
-        name="registration-form"
-        onClose={onClose}
-        onOpen={onOpen}
-        onRegister={handleRegisterModalSubmit}
-        activeModal={activeModal}
-      />
-      <LoginModal
-        name="login-form"
-        onClose={onClose}
-        onOpen={onOpen}
-        // onLogin={onLogin}
-        activeModal={activeModal}
-      />
-    </div>
+        <Footer />
+
+        {/* Modals */}
+        <AddItemModal
+          name="add-garment-form"
+          onClose={onClose}
+          onOpen={onOpen}
+          onAddItem={onAddItem}
+          activeModal={activeModal}
+        />
+        <ItemModal
+          name="preview"
+          onClose={onClose}
+          activeModal={activeModal}
+          item={selectedCard}
+          openDeleteModal={openDeleteModal}
+        />
+        <DeleteModal
+          name="delete"
+          activeModal={activeModal}
+          onAddItem={onAddItem}
+          onClose={onClose}
+          onDelete={onDeleteItem}
+        />
+
+        {/* modal added for Sprint 14 */}
+        <RegisterModal
+          name="registration-form"
+          onClose={onClose}
+          onOpen={onOpen}
+          onRegister={handleRegistration}
+          activeModal={activeModal}
+        />
+
+        {/* modal added for Sprint 14 */}
+        <LoginModal
+          name="login-form"
+          onClose={onClose}
+          onOpen={onOpen}
+          onLogin={handleLogin}
+          activeModal={activeModal}
+        />
+
+        {/* ("change profile data") */}
+        {/* modal added for Sprint 14 */}
+        <EditProfileModal
+          name="edit-profile-form"
+          onClose={onClose}
+          onOpen={onOpen}
+          onEditProfileSubmit={handleEditProfile}
+          activeModal={activeModal}
+        />
+      </div>
+    </CurrentUserContext.Provider>
   );
 }
 
