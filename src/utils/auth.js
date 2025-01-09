@@ -15,7 +15,7 @@ function registerUser({ email, password, username, avatarUrl }) {
       email: email,
       password: password,
       name: username,
-      avatar: avatarUrl, //(commented out for no avatar scenario)
+      avatar: avatarUrl, //(comment out for no avatar scenario)
     }),
     headers: { "Content-Type": "application/json" },
   }).then(handleServerResponse);

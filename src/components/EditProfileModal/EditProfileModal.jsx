@@ -5,7 +5,7 @@
 import { useState, useEffect, useContext } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
-import "../ModalWithForm/ModalWithForm.css";
+import "./EditProfileModal.css";
 
 const EditProfileModal = ({
   name,
@@ -63,7 +63,7 @@ const EditProfileModal = ({
           name="name"
           className="modal-form__input"
           id="name"
-          placeholder="User Name"
+          placeholder="Username"
           value={currentUser.name}
           onChange={handleChange}
           required
