@@ -45,23 +45,23 @@ export function deleteItem(id) {
 }
 
 // checks the current user's token to make sure they are authorized (Sprint 14)
-export function getCurrentUser(token) {
+export function getCurrentUser() {
   return fetch(`${baseUrl}/users/me`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      authorization: `Bearer ${token}`,
+      authorization: `Bearer ${getToken()}`,
     },
   }).then(handleServerResponse);
 }
 
 // change user's username and/or avatar ("change profile data") (Sprint 14)
-export function editUserProfile({ name, avatar }, token) {
+export function editUserProfile({ name, avatar }) {
   return fetch(`${baseUrl}/users/me`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
-      authorization: `Bearer ${token}`,
+      authorization: `Bearer ${getToken()}`,
     },
     body: JSON.stringify({ name, avatar }),
   }).then(handleServerResponse);

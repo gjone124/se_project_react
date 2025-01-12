@@ -289,7 +289,7 @@ src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Vers
 - Interaction between front end application and back end application
 - Full stack application
 
-**Chart of Class Inheritance Structure** (add in EditProfileModal, ProtectedRoute, Avatar, auth.js, & CurrentUserContext.js when complete; 51 unique files; 12 unique files reused; 92 instances of files being used; 47 images not included in chart)
+**Chart of Class Inheritance Structure** (51 unique files; 12 unique files reused; 92 instances of files being used; 47 images not included in chart)
 
 - 1)index.html
   - A)main.jsx
