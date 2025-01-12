@@ -23,6 +23,10 @@
   font-weight: 700;
 }
 
+.side-bar__username::first-letter {
+  text-transform: uppercase;
+}
+
 .side-bar__options {
   font-size: 20px;
   margin: 24px 0 0;

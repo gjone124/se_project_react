@@ -10,24 +10,28 @@
   cursor: pointer;
 }
 
-.item-card__label {
-  font-family: "Cabinet Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-  position: absolute;
+/* added for Sprint 14 ("like functionality") */
+.item-card__header {
   top: 15px;
+  position: absolute;
+  display: flex;
   left: 50%;
-  transform: translate(-50%, 0);
-  background-color: #ffffff;
-  border-radius: 4px;
-  width: max-content;
-  height: 24px;
-  margin: 0;
-  padding: 2px 12px;
-  box-sizing: border-box;
-  text-align: center;
+  transform: translate(-50%);
   align-items: center;
+  gap: 10px;
+}
+
+/* modified for Sprint 14 */
+.item-card__label {
+  margin: 0;
+  background-color: white;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 2px 12px;
+  border-radius: 4px;
 }
 
 .item-card__icon {
@@ -35,6 +39,23 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+/* added for Sprint 14 ("like functionality") */
+.item-card__heart {
+  background-image: url(../../assets/heart.png);
+  width: 18px;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* added for Sprint 14 ("like functionality") */
+.item-card__heart_liked {
+  background-image: url(../../assets/heart_liked.png);
 }
 
 @media screen and (width < 800px) {

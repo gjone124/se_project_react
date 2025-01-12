@@ -45,7 +45,6 @@ const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
     event.preventDefault();
     onRegister(userData);
     onClose();
-    console.log("registration submitted from RegisterModal.jsx");
   };
 
   return (
@@ -110,7 +109,7 @@ const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
           placeholder="Avatar URL"
           value={userData.avatarUrl}
           onChange={handleChange}
-          required // (comment out if no avatar provided)
+          //required // (comment out if no avatar provided)
         />
       </label>
 

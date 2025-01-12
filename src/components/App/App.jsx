@@ -25,14 +25,17 @@ import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
 
 // Utilities
 import { getWeatherData, filterWeatherData } from "../../utils/weatherApi.js";
-import { getItems, postItem, deleteItem } from "../../utils/api.js";
-import { coordinates, apiKey } from "../../utils/constants.js";
 import {
-  registerUser,
-  loginUser,
+  getItems,
+  postItem,
+  deleteItem,
   getCurrentUser,
   editUserProfile,
-} from "../../utils/auth.js";
+  addCardLike,
+  removeCardLike,
+} from "../../utils/api.js";
+import { coordinates, apiKey } from "../../utils/constants.js";
+import { registerUser, loginUser } from "../../utils/auth.js";
 
 // Styling for App.jsx
 import "./App.css";
@@ -57,16 +60,58 @@ function App() {
 
   const navigate = useNavigate(); // Sprint 14
 
+  /* Initial Data Loading */
+
+  // get current user
+  // this method keeps current user logged in when you refresh page (Sprint 14)
+  useEffect(() => {
+    const token = localStorage.getItem("jwt");
+    if (token) {
+      // fetch current user using stored token
+      getCurrentUser(token)
+        .then((user) => {
+          setIsLoggedIn(true); // mark user as logged in
+          setCurrentUser(user); // update user state
+        })
+        .catch((err) => {
+          console.error("Error fetching user:", err);
+          localStorage.removeItem("jwt"); // remove invalid token if necessary
+          setIsLoggedIn(false); // ensure state reflects logged out status
+          setCurrentUser(null);
+        });
+    }
+  }, []); // empty dependency array ensures this only runs on page load
+
+  // get weather
+  useEffect(() => {
+    getWeatherData(coordinates, apiKey)
+      .then((data) => {
+        const filteredData = filterWeatherData(data);
+        setWeatherData(filteredData);
+      })
+      .catch(console.error);
+  }, []);
+
+  // get items
+  useEffect(() => {
+    getItems()
+      .then((data) => {
+        setClothingItems(data.reverse());
+      })
+      .catch(console.error);
+  }, []);
+
+  /* Modal Handlers */
   function onOpen(name) {
     setActiveModal(name);
   }
 
-  function openDeleteModal() {
-    onOpen("delete");
-  }
-
   function onClose() {
     setActiveModal("");
+  }
+
+  function openDeleteModal() {
+    onOpen("delete");
   }
 
   function onAddClothes() {
@@ -82,11 +127,38 @@ function App() {
     setMobileMenuOpened(!isMobileMenuOpened);
   }
 
+  // added for Sprint 14
+  function handleRegisterClick() {
+    setActiveModal("registration-form");
+  }
+
+  // added for Sprint 14
+  function handleLoginClick() {
+    setActiveModal("login-form");
+  }
+
+  /* Temperature Unit Handler */
   const handleToggleSwitchChange = () => {
     if (currentTemperatureUnit === "C") setCurrentTemperatureUnit("F");
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
   };
 
+  /* Like Handler */
+  // Sprint 14 ("like functionality")
+  function handleCardLike({ id, isLiked }) {
+    const token = localStorage.getItem("jwt");
+    const updateCardLikeStatus = isLiked ? removeCardLike : addCardLike;
+
+    updateCardLikeStatus(id, token)
+      .then((updatedCard) => {
+        setClothingItems((cards) =>
+          cards.map((item) => (item._id === id ? updatedCard : item))
+        );
+      })
+      .catch(console.error);
+  }
+
+  /* Submit Handlers */
   function handleSubmit(request) {
     return request().then(onClose).catch(console.error);
   }
@@ -116,39 +188,7 @@ function App() {
     handleSubmit(deleteRequest);
   }
 
-  // added for Sprint 14
-  function handleRegisterClick() {
-    console.log("clicked on sign up");
-    setActiveModal("registration-form");
-  }
-
-  // added for Sprint 14
-  function handleLoginClick() {
-    console.log("clicked on log in");
-    setActiveModal("login-form");
-  }
-
-  //Initial Data Loading (add get users using useEffect)
-
-  // get weather
-  useEffect(() => {
-    getWeatherData(coordinates, apiKey)
-      .then((data) => {
-        const filteredData = filterWeatherData(data);
-        setWeatherData(filteredData);
-      })
-      .catch(console.error);
-  }, []);
-
-  // get items
-  useEffect(() => {
-    getItems()
-      .then((data) => {
-        setClothingItems(data.reverse());
-      })
-      .catch(console.error);
-  }, []);
-
+  /* Authentication Handlers */
   // when there is a successful registration, the user should be logged in (Sprint 14)
   const handleRegistration = ({ email, password, username, avatarUrl }) => {
     // user presses "Sign Up" button, request to API is sent, if successful registerUser is called to save it in database,
@@ -224,6 +264,8 @@ function App() {
                   weatherData={weatherData}
                   onCardClick={onCardClick}
                   items={clothingItems}
+                  // Sprint 14 ("like functionality")
+                  handleCardLike={handleCardLike}
                 />
               }
             />
@@ -242,6 +284,8 @@ function App() {
                     // to allow setActiveModal to be called within handleEditProfileClick
                     // in Profile.jsx
                     setActiveModal={setActiveModal}
+                    // Sprint 14 ("like functionality")
+                    handleCardLike={handleCardLike}
                   />
                 </ProtectedRoute>
               }

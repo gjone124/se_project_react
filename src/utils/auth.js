@@ -5,7 +5,7 @@ import { handleServerResponse } from "./api.js";
 // register new user (essentially create or sign up new user)
 function registerUser({ email, password, username, avatarUrl }) {
   // remove '|| !avatarUrl' if no avatar is provided)"
-  if (!email || !password || !username || !avatarUrl) {
+  if (!email || !password || !username) {
     return Promise.reject("Missing required fields.");
   }
 
@@ -15,7 +15,7 @@ function registerUser({ email, password, username, avatarUrl }) {
       email: email,
       password: password,
       name: username,
-      avatar: avatarUrl, //(comment out for no avatar scenario)
+      avatar: avatarUrl,
     }),
     headers: { "Content-Type": "application/json" },
   }).then(handleServerResponse);
@@ -30,28 +30,4 @@ function loginUser({ email, password }) {
   }).then(handleServerResponse);
 }
 
-// checks the current user's token to make sure they are authorized
-function getCurrentUser(token) {
-  return fetch(`${baseUrl}/users/me`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      authorization: `Bearer ${token}`,
-    },
-  }).then(handleServerResponse);
-}
-
-//("change profile data")
-function editUserProfile({ name, avatar }, token) {
-  return fetch(`${baseUrl}/users/me`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-      authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify({ name, avatar }),
-  }).then(handleServerResponse);
-}
-
-export { registerUser, loginUser, getCurrentUser, editUserProfile };
-//("change profile data") => editUserProfile
+export { registerUser, loginUser };

@@ -14,7 +14,7 @@ const EditProfileModal = ({
   activeModal,
   onOpen,
 }) => {
-  const currentUser = useContext(CurrentUserContext);
+  const { currentUser } = useContext(CurrentUserContext);
 
   const [userData, setUserData] = useState({
     name: "",
@@ -29,22 +29,21 @@ const EditProfileModal = ({
     }));
   };
 
+  // this method is to insert current user's data for the Edit Profile Modal automatically when you open the form
+  useEffect(() => {
+    // this only runs when the active modal is the edit profile modal
+    // (if you didn't have this if statement, it would run everytime the activeModal is called which we don't want)
+    if (activeModal === "edit-profile-form") {
+      setUserData({ name: currentUser?.name, avatar: currentUser?.avatar });
+    }
+  }, [activeModal]);
+
   // method handles when user clicks on "Save changes" submit button within "Change profile data" form
   const handleEditProfileModalSubmit = (event) => {
     event.preventDefault();
     onEditProfileSubmit({ name: userData.name, avatar: userData.avatar });
     onClose();
-    //console.log("edit profile modal submitted");
   };
-
-  useEffect(() => {
-    if (currentUser) {
-      setUserData({
-        name: currentUser.name || "",
-        avatar: currentUser.avatar || "",
-      });
-    }
-  }, [currentUser]);
 
   return (
     <ModalWithForm
@@ -64,7 +63,7 @@ const EditProfileModal = ({
           className="modal-form__input"
           id="name"
           placeholder="Username"
-          value={currentUser.name}
+          value={userData.name}
           onChange={handleChange}
           required
         />
@@ -78,7 +77,7 @@ const EditProfileModal = ({
           className="modal-form__input"
           id="avatar"
           placeholder="Avatar"
-          value={currentUser.avatar}
+          value={userData.avatar}
           onChange={handleChange}
           required
         />

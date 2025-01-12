@@ -33,7 +33,6 @@ const LoginModal = ({ name, onClose, onLogin, activeModal, onOpen }) => {
     event.preventDefault();
     onLogin(userData);
     onClose();
-    console.log("login submitted");
   };
 
   return (

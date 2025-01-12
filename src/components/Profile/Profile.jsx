@@ -14,10 +14,10 @@ function Profile({
   onAddClothes,
   handleLogOut,
   setActiveModal,
+  handleCardLike,
 }) {
   // handleEditProfileClick added for Sprint 14 ("change profile data")
   function handleEditProfileClick() {
-    console.log("clicked on edit profile");
     setActiveModal("edit-profile-form");
   }
 
@@ -25,7 +25,7 @@ function Profile({
     <div className="profile">
       <section className="profile__side-bar">
         <SideBar
-          //("change profile data")
+          // Sprint 14 ("change profile data")
           handleUpdateClick={handleEditProfileClick}
           handleLogOut={handleLogOut}
         />
@@ -35,6 +35,8 @@ function Profile({
           onCardClick={onCardClick}
           items={items}
           onAddClothes={onAddClothes}
+          //Sprint 14 ("like functionality")
+          handleCardLike={handleCardLike}
         />
       </section>
     </div>

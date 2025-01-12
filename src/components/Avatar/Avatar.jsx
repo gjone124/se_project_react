@@ -10,29 +10,26 @@ function Avatar({ className }) {
   const { currentUser } = useContext(CurrentUserContext);
 
   return (
-    <img
-      //input an avatar URL by finding an image, right clicking on
-      //it, & selecting "Copy Image Address"
-      className={`avatar ${className || ""}`}
-      src={currentUser?.avatar || avatar}
-      alt={`avatar for ${currentUser?.name}` || "default avatar"}
-    />
-
-    // // ternary operator can be used as shown below to display 1st letter
-    // // of user's name if no avatar is provided
-    // <>
-    //   {currentUser.avatar ? (
-    //     <img
-    //       // input an avatar URL by finding an image, right clicking on
-    //       // it, & selecting "Copy Image Address"
-    //       className={`avatar ${className || ""}`}
-    //       src={currentUser?.avatar || avatar}
-    //       alt={`avatar for ${currentUser?.name}` || "default avatar"}
-    //     />
-    //   ) : (
-    //     <div>{currentUser.name[0]}</div>
-    //   )}
-    // </>
+    // ternary operator can be used as shown below to display 1st letter
+    // of user's name if no avatar is provided
+    <>
+      {currentUser?.avatar ? (
+        <img
+          // input an avatar URL by finding an image, right clicking on
+          // it, & selecting "Copy Image Address"
+          className={`avatar ${className || ""}`}
+          src={currentUser?.avatar || avatar}
+          alt={`avatar for ${currentUser?.name}` || "default avatar"}
+        />
+      ) : (
+        <div
+          className="avatar avatar__default"
+          alt="avatar when image not provided"
+        >
+          {currentUser?.name[0]}
+        </div>
+      )}
+    </>
   );
 }
 

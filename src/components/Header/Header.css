@@ -95,7 +95,7 @@
   display: flex;
 }
 
-.header__name {
+.header__username {
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -103,6 +103,10 @@
   align-content: center;
   margin: 0;
   padding: 0;
+}
+
+.header__username::first-letter {
+  text-transform: uppercase;
 }
 
 .header__avatar {

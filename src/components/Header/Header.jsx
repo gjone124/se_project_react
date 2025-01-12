@@ -54,7 +54,7 @@ function Header({
                   !isMenuOpen ? "header__user_type_menu-closed" : ""
                 }`}
               >
-                <p className="header__name">
+                <p className="header__username">
                   {currentUser?.name || "Terrence Tegegne"}
                 </p>
                 <Avatar />

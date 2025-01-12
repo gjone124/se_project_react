@@ -289,7 +289,7 @@ src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Vers
 - Interaction between front end application and back end application
 - Full stack application
 
-**Chart of Class Inheritance Structure** (add in EditProfileModal, ProtectedRoute, Avatar, & auth.js when complete; 46 unique files; 9 unique files reused; 67 instances of files being used; 47 images not included in chart)
+**Chart of Class Inheritance Structure** (add in EditProfileModal, ProtectedRoute, Avatar, auth.js, & CurrentUserContext.js when complete; 51 unique files; 12 unique files reused; 92 instances of files being used; 47 images not included in chart)
 
 - 1)index.html
   - A)main.jsx
@@ -300,25 +300,11 @@ src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Vers
         - 2)ToggleSwitch.jsx
           - A)ToggleSwitch.css
           - B)CurrentTemperatureUnitContext.js (1st time file is imported)
-      - c)RegisterModal.jsx
-        - 1)RegisterModal.css (empty currently)
-        - 2)ModalWithForm.jsx (1st time file is imported)
-          - A)ModalWithForm.css (1st time file is imported)
-          - B)Modal.jsx (1st time file is imported)
-            - I)Modal.css (1st time file is imported)
-      - d)LoginModal.jsx
-        - 1)LoginModal.css (empty currently)
-        - 2)ModalWithForm.jsx (2nd time file is imported)
-          - A)ModalWithForm.css (2nd time file is imported)
-          - B)Modal.jsx (2nd time file is imported)
-            - I)Modal.css (2nd time file is imported)
-      - e)AddItemModal.jsx
-        - 1)AddItemModal.css (empty currently)
-        - 2)ModalWithForm.jsx (3rd time file is imported)
-          - A)ModalWithForm.css (3rd time file is imported)
-          - B)Modal.jsx (3rd time file is imported)
-            - I)Modal.css (3rd time file is imported)
-      - f)Main.jsx
+        - 3)Avatar.jsx (1st time file is imported)
+          - A)Avatar.css (1st time file is imported)
+          - B)CurrentUserContext.js (1st time file is imported)
+        - 4)CurrentUserContext.js (2nd time file is imported)
+      - c)Main.jsx
         - 1)Main.css
         - 2)WeatherCard.jsx
           - A)WeatherCard.css
@@ -326,32 +312,71 @@ src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Vers
           - C)constants.js (1st time file is imported)
         - 3)ItemCard.jsx (1st time file is imported)
           - A)ItemCard.css (1st time file is imported)
+          - B)CurrentUserContext.js (3rd time file is imported)
         - 4)CurrentTemperatureUnitContext.js (3rd time file is imported)
-      - g)ItemModal.jsx
-        - 1)ItemModal.css
-        - 2)Modal.jsx (4th time file is imported)
-          - A)Modal.css (4th time file is imported)
-      - h)DeleteModal.jsx
-        - 1)DeleteModal.css
-        - 2)Modal.jsx (5th time file is imported)
-          - A)Modal.css (5th time file is imported)
-      - i)Profile.jsx
+      - d)Profile.jsx
         - 1)Profile.css
         - 2)SideBar.jsx
           - A)SideBar.css
+            - I)Avatar.jsx (2nd time file is imported)
+              - a)Avatar.css (2nd time file is imported)
+              - b)CurrentUserContext.js (4th time file is imported)
+          - B)CurrentUserContext.js (5th time file is imported)
         - 3)ClothesSection.jsx
           - A)ClothesSection.css
           - B)ItemCard.jsx (2nd time file is imported)
             - I)ItemCard.css (2nd time file is imported)
-      - j)Footer.jsx
+            - II)CurrentUserContext.js (6th time file is imported)
+          - C)CurrentUserContext.js (7th time file is imported)
+      - e)Footer.jsx
         - 1)Footer.css
-      - k)CurrentTemperatureUnitContext.js (4th time file is imported)
-      - l)api.js (1st time file is imported)
+      - f)RegisterModal.jsx
+        - 1)RegisterModal.css (empty currently)
+        - 2)ModalWithForm.jsx (1st time file is imported)
+          - A)ModalWithForm.css (1st time file is imported)
+          - B)Modal.jsx (1st time file is imported)
+            - I)Modal.css (1st time file is imported)
+      - g)LoginModal.jsx
+        - 1)LoginModal.css (empty currently)
+        - 2)ModalWithForm.jsx (2nd time file is imported)
+          - A)ModalWithForm.css (2nd time file is imported)
+          - B)Modal.jsx (2nd time file is imported)
+            - I)Modal.css (2nd time file is imported)
+      - h)ItemModal.jsx
+        - 1)ItemModal.css
+        - 2)Modal.jsx (3rd time file is imported)
+          - A)Modal.css (3rd time file is imported)
+        - 3)CurrentUserContext.js (8th time file is imported)
+      - i)AddItemModal.jsx
+        - 1)AddItemModal.css (empty currently)
+        - 2)ModalWithForm.jsx (3rd time file is imported)
+          - A)ModalWithForm.css (3rd time file is imported)
+          - B)Modal.jsx (4th time file is imported)
+            - I)Modal.css (4th time file is imported)
+        - 3)CurrentUserContext.js (9th time file is imported)
+      - j)DeleteModal.jsx
+        - 1)DeleteModal.css
+        - 2)Modal.jsx (5th time file is imported)
+          - A)Modal.css (5th time file is imported)
+      - k)EditProfileModal.jsx
+        - 1)EditProfileModal.css (empty currently)
+        - 2)ModalWithForm.jsx (4th time file is imported)
+          - A)ModalWithForm.css (4th time file is imported)
+          - B)Modal.jsx (6th time file is imported)
+            - I)Modal.css (6th time file is imported)
+        - 3)CurrentUserContext.js (10th time file is imported)
+      - l)ProtectedRoute.jsx
+      - m)CurrentTemperatureUnitContext.js (4th time file is imported)
+      - n)CurrentUserContext.js (11th time file is imported)
+      - o)api.js (1st time file is imported)
         - 1)constants.js (2nd time file is imported)
-      - m)weatherApi.js
+          o)auth.js
         - 1)api.js (2nd time file is imported)
-          - A)constants.js (3rd time file is imported)
-      - n)constants.js (4th time file is imported)
+        - 2)constants.js (3rd time file is imported)
+      - p)weatherApi.js
+        - 1)api.js (3rd time file is imported)
+          - A)constants.js (4th time file is imported)
+      - q)constants.js (5th time file is imported)
     - II)index.css
       - a)normalize.css
       - b)fonts.css
