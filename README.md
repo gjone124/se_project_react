@@ -289,7 +289,7 @@ src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Vers
 - Interaction between front end application and back end application
 - Full stack application
 
-**Chart of Class Inheritance Structure** (51 unique files; 12 unique files reused; 92 instances of files being used; 47 images not included in chart)
+**Chart of Class Inheritance Structure** (51 unique files; 12 unique files reused; 91 instances of files being used; 47 images not included in chart)
 
 - 1)index.html
   - A)main.jsx
@@ -353,7 +353,6 @@ src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Vers
           - A)ModalWithForm.css (3rd time file is imported)
           - B)Modal.jsx (4th time file is imported)
             - I)Modal.css (4th time file is imported)
-        - 3)CurrentUserContext.js (9th time file is imported)
       - j)DeleteModal.jsx
         - 1)DeleteModal.css
         - 2)Modal.jsx (5th time file is imported)
@@ -364,10 +363,10 @@ src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Vers
           - A)ModalWithForm.css (4th time file is imported)
           - B)Modal.jsx (6th time file is imported)
             - I)Modal.css (6th time file is imported)
-        - 3)CurrentUserContext.js (10th time file is imported)
+        - 3)CurrentUserContext.js (9th time file is imported)
       - l)ProtectedRoute.jsx
       - m)CurrentTemperatureUnitContext.js (4th time file is imported)
-      - n)CurrentUserContext.js (11th time file is imported)
+      - n)CurrentUserContext.js (10th time file is imported)
       - o)api.js (1st time file is imported)
         - 1)constants.js (2nd time file is imported)
           o)auth.js

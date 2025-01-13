@@ -1,10 +1,8 @@
-import React, { useState, useContext } from "react";
+import { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import "./AddItemModal.css";
-import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
 
 const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
-  const { currentUser } = useContext(CurrentUserContext);
   const [itemData, setItemData] = useState({
     name: "",
     link: "",
