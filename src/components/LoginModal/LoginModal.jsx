@@ -32,7 +32,10 @@ const LoginModal = ({ name, onClose, onLogin, activeModal, onOpen }) => {
   const handleLoginModalSubmit = (event) => {
     event.preventDefault();
     onLogin(userData);
-    onClose();
+    // .then(() => onClose()) // close modal after successful login
+    // .catch((error) => {
+    //   console.error("Login error:", error);
+    // });
   };
 
   return (

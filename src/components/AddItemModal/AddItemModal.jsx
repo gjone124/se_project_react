@@ -41,18 +41,17 @@ const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
       name: itemData.name,
       imageUrl: itemData.link,
       weather: itemData.weatherType,
-    })
-      .then(() => {
-        setItemData({
-          name: "",
-          link: "",
-          weatherType: "",
-        });
-        // setName("");
-        // setUrl("");
-        // setWeatherType("");
-      })
-      .catch(console.error);
+    }).then(() => {
+      setItemData({
+        name: "",
+        link: "",
+        weatherType: "",
+      });
+      // setName("");
+      // setUrl("");
+      // setWeatherType("");
+    });
+    // .catch(console.error);
   };
 
   return (

@@ -45,7 +45,7 @@ export function deleteItem(id) {
 }
 
 // checks the current user's token to make sure they are authorized (Sprint 14)
-export function getCurrentUser() {
+export function verifyUserByCheckingToken() {
   return fetch(`${baseUrl}/users/me`, {
     method: "GET",
     headers: {

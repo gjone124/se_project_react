@@ -29,7 +29,7 @@ import {
   getItems,
   postItem,
   deleteItem,
-  getCurrentUser,
+  verifyUserByCheckingToken,
   editUserProfile,
   addCardLike,
   removeCardLike,
@@ -68,13 +68,13 @@ function App() {
     const token = localStorage.getItem("jwt");
     if (token) {
       // fetch current user using stored token
-      getCurrentUser(token)
+      verifyUserByCheckingToken(token)
         .then((user) => {
           setIsLoggedIn(true); // mark user as logged in
           setCurrentUser(user); // update user state
         })
-        .catch((err) => {
-          console.error("Error fetching user:", err);
+        .catch((error) => {
+          console.error("Error fetching user:", error);
           localStorage.removeItem("jwt"); // remove invalid token if necessary
           setIsLoggedIn(false); // ensure state reflects logged out status
           setCurrentUser(null);
@@ -155,22 +155,25 @@ function App() {
           cards.map((item) => (item._id === id ? updatedCard : item))
         );
       })
-      .catch(console.error);
+      .catch((error) => console.error(error));
   }
 
   /* Submit Handlers */
   function handleSubmit(request) {
-    return request().then(onClose).catch(console.error);
+    return request()
+      .then(() => onClose())
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   }
 
-  // fetch to mock server, add item to mock server, & then add item to the DOM (Document Object Modifier)
+  // fetch to server, add item to server, & then add item to the DOM (Document Object Modifier)
   function onAddItem(item) {
     const addItemRequest = () => {
       return postItem(item).then((data) => {
         setClothingItems([data, ...clothingItems]);
       });
     };
-
     return handleSubmit(addItemRequest);
   }
 
@@ -184,7 +187,6 @@ function App() {
         );
       });
     };
-
     handleSubmit(deleteRequest);
   }
 
@@ -193,16 +195,16 @@ function App() {
   const handleRegistration = ({ email, password, username, avatarUrl }) => {
     // user presses "Sign Up" button, request to API is sent, if successful registerUser is called to save it in database,
     // response returned, handleLogin called to log in user
-    return registerUser({ email, password, username, avatarUrl }).then(
-      (response) => {
+    return registerUser({ email, password, username, avatarUrl })
+      .then((response) => {
         handleLogin({ email, password });
-      }
-    );
+      })
+      .catch((error) => console.error("Registration error:", error));
   };
 
   // after you register user, you can check Mongo DB to see if user has been added
   // & you can use Postman to get your current users & ensure user was added
-  // but would need to readd "getUsers" method implemented for Sprint 12
+  // but would need to re-add "getUsers" method implemented for Sprint 12
   // but we were told to remove for Sprint 13
 
   // log in the user (Sprint 14)
@@ -213,23 +215,29 @@ function App() {
     // then set the current user to the current user
     return loginUser({ email, password })
       .then((data) => {
+        if (!data.token) throw new Error("Token not received.");
         //"jwt" is the key that data.token is stored in
         localStorage.setItem("jwt", data.token);
         setIsLoggedIn(true);
-        return getCurrentUser(data.token);
+        return verifyUserByCheckingToken(data.token);
       })
       .then((user) => {
         setCurrentUser(user);
-      });
+        onClose();
+      })
+      .catch((error) => console.error("Login error:", error));
   };
 
   //("change profile data")
   // edit user data (username or avatar) (Sprint 14)
   const handleEditProfile = (profileData) => {
     const token = localStorage.getItem("jwt");
-    editUserProfile(profileData, token).then((updatedUser) => {
-      setCurrentUser(updatedUser);
-    });
+    editUserProfile(profileData, token)
+      .then((updatedUser) => {
+        setCurrentUser(updatedUser);
+        onClose();
+      })
+      .catch((error) => console.error("Error changing data:", error));
   };
 
   // log out functionality added for Sprint 14

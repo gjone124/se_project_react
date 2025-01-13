@@ -44,7 +44,11 @@ const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
   const handleRegisterModalSubmit = (event) => {
     event.preventDefault();
     onRegister(userData);
-    onClose();
+    // modal should only close after successful registration
+    // .then(() => onClose())
+    // .catch((error) => {
+    //   console.error("Registration error:", error);
+    // });
   };
 
   return (

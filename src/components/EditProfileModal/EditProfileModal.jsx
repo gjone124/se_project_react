@@ -42,7 +42,10 @@ const EditProfileModal = ({
   const handleEditProfileModalSubmit = (event) => {
     event.preventDefault();
     onEditProfileSubmit({ name: userData.name, avatar: userData.avatar });
-    onClose();
+    // .then(() => onClose())
+    // .catch((error) => {
+    //   console.error("Error changing data:", error);
+    // });
   };
 
   return (
