@@ -3,9 +3,9 @@ import SideBar from "../SideBar/SideBar.jsx";
 
 import "./Profile.css";
 
-// ("change profile data") => setActiveModal passed as prop from App.jsx
-// to allow setActiveModal to be called within handleEditProfileClick
-// in Profile.jsx
+// setActiveModal passed as prop from App.jsx
+// to allow setActiveModal to be called within
+// handleEditProfileClick in Profile.jsx
 
 // Profile component includes SideBar & ClothesSection components
 function Profile({
@@ -16,7 +16,6 @@ function Profile({
   setActiveModal,
   handleCardLike,
 }) {
-  // handleEditProfileClick added for Sprint 14 ("change profile data")
   function handleEditProfileClick() {
     setActiveModal("edit-profile-form");
   }
@@ -25,7 +24,6 @@ function Profile({
     <div className="profile">
       <section className="profile__side-bar">
         <SideBar
-          // Sprint 14 ("change profile data")
           handleUpdateClick={handleEditProfileClick}
           handleLogOut={handleLogOut}
         />
@@ -35,7 +33,6 @@ function Profile({
           onCardClick={onCardClick}
           items={items}
           onAddClothes={onAddClothes}
-          //Sprint 14 ("like functionality")
           handleCardLike={handleCardLike}
         />
       </section>

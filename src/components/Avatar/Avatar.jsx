@@ -5,7 +5,7 @@ import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
 
 import "./Avatar.css";
 
-// this file is reused in Header.jsx & SideBar.jsx (new file for Sprint 14)
+// this file is reused in Header.jsx & SideBar.jsx
 function Avatar({ className }) {
   const { currentUser } = useContext(CurrentUserContext);
 

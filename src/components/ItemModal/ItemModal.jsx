@@ -9,7 +9,7 @@ function ItemModal({ name, onClose, activeModal, item, openDeleteModal }) {
   const { currentUser } = useContext(CurrentUserContext);
 
   // when there is a user logged in & the selected card's owner is the same value as the
-  // current user's ID, the card is owned by the current user & returns true (Sprint 14)
+  // current user's ID, the card is owned by the current user & returns true
   const isOwnedByCurrentUser = currentUser && item.owner === currentUser._id;
 
   return (
@@ -18,7 +18,7 @@ function ItemModal({ name, onClose, activeModal, item, openDeleteModal }) {
       <div className="item-modal__info">
         <span className="item-modal__span">
           <h2 className="item-modal__title">{item.name}</h2>
-          {/* only display delete button if user is logged in & item is owned by current user (Sprint 14) */}
+          {/* only display delete button if user is logged in & item is owned by current user */}
           {isOwnedByCurrentUser && (
             <button
               className="item-modal__delete-button"

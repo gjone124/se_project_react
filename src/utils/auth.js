@@ -1,4 +1,3 @@
-/* file added for Sprint 14 */
 import { baseUrl } from "./constants.js";
 import { handleServerResponse } from "./api.js";
 

@@ -3,12 +3,14 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import "./AddItemModal.css";
 
 const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
+  // initialize values of name, link, & weatherType
   const [itemData, setItemData] = useState({
     name: "",
     link: "",
     weatherType: "",
   });
 
+  // update name, link, & weatherType when values change
   const handleChange = (event) => {
     const { name, value } = event.target;
     setItemData((previousItemData) => ({
@@ -16,21 +18,6 @@ const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
       [name]: value,
     }));
   };
-
-  // const [name, setName] = useState("");
-  // const handleNameChange = (event) => {
-  //   setName(event.target.value);
-  // };
-
-  // const [link, setUrl] = useState("");
-  // const handleUrlChange = (event) => {
-  //   setUrl(event.target.value);
-  // };
-
-  // const [weatherType, setWeatherType] = useState(""); // New state for weather type
-  // const handleWeatherChange = (event) => {
-  //   setWeatherType(event.target.value); // Update weather type when radio button changes
-  // };
 
   // add item to items array & reset form values
   const handleAddItemSubmit = (event) => {
@@ -45,11 +32,7 @@ const AddItemModal = ({ onClose, onAddItem, activeModal, onOpen }) => {
         link: "",
         weatherType: "",
       });
-      // setName("");
-      // setUrl("");
-      // setWeatherType("");
     });
-    // .catch(console.error);
   };
 
   return (

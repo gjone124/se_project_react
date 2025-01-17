@@ -48,7 +48,7 @@ function Header({
           onClick={onMenuOpen}
         ></button>
 
-        {/* conditional rendering & fragment used to display necessary buttons when LOGGED IN (added for Sprint 14) */}
+        {/* conditional rendering & fragment used to display necessary buttons when LOGGED IN */}
         {isLoggedIn && (
           <>
             <Link to="/profile" className="header__link">
@@ -77,10 +77,9 @@ function Header({
           </>
         )}
 
-        {/* conditional rendering & fragment used to display necessary buttons when NOT logged in (added for Sprint 14) */}
+        {/* conditional rendering & fragment used to display necessary buttons when NOT logged in */}
         {!isLoggedIn && (
           <>
-            {/* button added for Sprint 14 */}
             <button
               type="button"
               className={`header__button-to-open-form ${
@@ -93,7 +92,6 @@ function Header({
               Log In
             </button>
 
-            {/* button added for Sprint 14 */}
             <button
               type="button"
               className={`header__button-to-open-form ${

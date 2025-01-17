@@ -9,7 +9,6 @@ import "./Main.css";
 function Main({ weatherData, onCardClick, items, handleCardLike }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
 
-  // Sprint 14
   const filteredItems = items.filter(
     (item) => item.weather === weatherData.type
   );
@@ -28,7 +27,6 @@ function Main({ weatherData, onCardClick, items, handleCardLike }) {
               key={item._id}
               onCardClick={onCardClick}
               item={item}
-              // Sprint 14 ("like functionality")
               handleCardLike={handleCardLike}
             />
           ))

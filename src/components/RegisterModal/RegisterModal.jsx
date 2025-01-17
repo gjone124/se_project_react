@@ -1,5 +1,3 @@
-/* file added for Sprint 14 (SignUpModal) */
-
 import { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import "./RegisterModal.css";
@@ -20,35 +18,10 @@ const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
     }));
   };
 
-  // const [email, setEmail] = useState("");
-  // const handleEmailChange = (event) => {
-  //   setEmail(event.target.value);
-  // };
-
-  // const [password, setPassword] = useState("");
-  // const handlePasswordChange = (event) => {
-  //   setPassword(event.target.value);
-  // };
-
-  // const [username, setUsername] = useState("");
-  // const handleUsernameChange = (event) => {
-  //   setUsername(event.target.value);
-  // };
-
-  // const [avatarUrl, setAvatarUrl] = useState("");
-  // const handleAvatarUrlChange = (event) => {
-  //   setAvatarUrl(event.target.value);
-  // };
-
   // method handles when user clicks on "Sign Up" submit button within "Sign Up" form
   const handleRegisterModalSubmit = (event) => {
     event.preventDefault();
     onRegister(userData);
-    // modal should only close after successful registration
-    // .then(() => onClose())
-    // .catch((error) => {
-    //   console.error("Registration error:", error);
-    // });
   };
 
   return (

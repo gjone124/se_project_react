@@ -1,5 +1,3 @@
-/* file added for Sprint 14 */
-
 import { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import "./LoginModal.css";
@@ -18,24 +16,10 @@ const LoginModal = ({ name, onClose, onLogin, activeModal, onOpen }) => {
     }));
   };
 
-  // const [email, setEmail] = useState("");
-  // const handleEmailChange = (event) => {
-  //   setEmail(event.target.value);
-  // };
-
-  // const [password, setPassword] = useState("");
-  // const handlePasswordChange = (event) => {
-  //   setPassword(event.target.value);
-  // };
-
   // method handles when user clicks on "Log In" submit button within "Log In" form
   const handleLoginModalSubmit = (event) => {
     event.preventDefault();
     onLogin(userData);
-    // .then(() => onClose()) // close modal after successful login
-    // .catch((error) => {
-    //   console.error("Login error:", error);
-    // });
   };
 
   return (

@@ -44,7 +44,7 @@ export function deleteItem(id) {
   }).then(handleServerResponse);
 }
 
-// checks the current user's token to make sure they are authorized (Sprint 14)
+// checks the current user's token to make sure they are authorized
 export function verifyUserByCheckingToken() {
   return fetch(`${baseUrl}/users/me`, {
     method: "GET",
@@ -55,7 +55,7 @@ export function verifyUserByCheckingToken() {
   }).then(handleServerResponse);
 }
 
-// change user's username and/or avatar ("change profile data") (Sprint 14)
+// change user's username and/or avatar
 export function editUserProfile({ name, avatar }) {
   return fetch(`${baseUrl}/users/me`, {
     method: "PATCH",
@@ -67,7 +67,6 @@ export function editUserProfile({ name, avatar }) {
   }).then(handleServerResponse);
 }
 
-// added for Sprint 14 ("like functionality")
 // like card (protected, requires token)
 export function addCardLike(id) {
   return fetch(`${baseUrl}/items/${id}/likes`, {
@@ -79,7 +78,6 @@ export function addCardLike(id) {
   }).then(handleServerResponse);
 }
 
-// added for Sprint 14 ("like functionality")
 // unlike card (protected, requires token)
 export function removeCardLike(id) {
   return fetch(`${baseUrl}/items/${id}/likes`, {

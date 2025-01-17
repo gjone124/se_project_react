@@ -2,7 +2,6 @@
   min-width: 229px;
   display: flex;
   flex-direction: column;
-  /* gap: 16px; */
 }
 
 .side-bar__user-info {

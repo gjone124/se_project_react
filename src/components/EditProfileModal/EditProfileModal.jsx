@@ -1,7 +1,3 @@
-/* file added for Sprint 14 */
-
-//("change profile data")
-
 import { useState, useEffect, useContext } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
@@ -42,10 +38,6 @@ const EditProfileModal = ({
   const handleEditProfileModalSubmit = (event) => {
     event.preventDefault();
     onEditProfileSubmit({ name: userData.name, avatar: userData.avatar });
-    // .then(() => onClose())
-    // .catch((error) => {
-    //   console.error("Error changing data:", error);
-    // });
   };
 
   return (

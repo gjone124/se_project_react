@@ -15,8 +15,6 @@ import LoginModal from "../LoginModal/LoginModal.jsx";
 import AddItemModal from "../AddItemModal/AddItemModal.jsx";
 import ItemModal from "../ItemModal/ItemModal.jsx";
 import DeleteModal from "../DeleteModal/DeleteModal.jsx";
-
-//("change profile data")
 import EditProfileModal from "../EditProfileModal/EditProfileModal.jsx";
 
 // Contexts
@@ -55,15 +53,15 @@ function App() {
   const [clothingItems, setClothingItems] = useState([]);
   const [isMobileMenuOpened, setMobileMenuOpened] = useState(false);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Sprint 14
-  const [currentUser, setCurrentUser] = useState(null); // Sprint 14
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
 
-  const navigate = useNavigate(); // Sprint 14
+  const navigate = useNavigate();
 
   /* Initial Data Loading */
 
   // get current user
-  // autologin functionality (this method keeps current user logged in when you refresh page) (Sprint 14)
+  // autologin functionality (this method keeps current user logged in when you refresh page)
   useEffect(() => {
     const token = localStorage.getItem("jwt");
     if (token) {
@@ -127,12 +125,10 @@ function App() {
     setMobileMenuOpened(!isMobileMenuOpened);
   }
 
-  // added for Sprint 14
   function handleRegisterClick() {
     setActiveModal("registration-form");
   }
 
-  // added for Sprint 14
   function handleLoginClick() {
     setActiveModal("login-form");
   }
@@ -144,7 +140,6 @@ function App() {
   };
 
   /* Like Handler */
-  // Sprint 14 ("like functionality")
   function handleCardLike({ id, isLiked }) {
     const token = localStorage.getItem("jwt");
     const updateCardLikeStatus = isLiked ? removeCardLike : addCardLike;
@@ -191,7 +186,7 @@ function App() {
   }
 
   /* Authentication Handlers */
-  // when there is a successful registration, the user should be logged in (Sprint 14)
+  // when there is a successful registration, the user should be logged in
   const handleRegistration = ({ email, password, username, avatarUrl }) => {
     // user presses "Sign Up" button, request to API is sent,
     // if successful registerUser is called to save it in database,
@@ -206,11 +201,10 @@ function App() {
   };
 
   // after you register user, you can check Mongo DB to see if user has been added
-  // & you can use Postman to get your current users & ensure user was added
-  // but would need to re-add "getUsers" method implemented for Sprint 12
-  // but we were told to remove for Sprint 13
+  // Mongo DB will also show all current users
+  // & you can delete users & items remotely from Mongo DB
 
-  // log in the user (Sprint 14)
+  // log in the user
   const handleLogin = ({ email, password }) => {
     // call loginUser function from auth.js, then set localStorage token to response token,
     // then change state of isLoggedIn to true,
@@ -232,8 +226,7 @@ function App() {
       .catch((error) => console.error("Login error:", error));
   };
 
-  //("change profile data")
-  // edit user data (username or avatar) (Sprint 14)
+  // edit user data (username or avatar)
   const handleEditProfile = (profileData) => {
     const token = localStorage.getItem("jwt");
     editUserProfile(profileData, token)
@@ -245,7 +238,7 @@ function App() {
       .catch((error) => console.error("Error changing data:", error));
   };
 
-  // log out functionality added for Sprint 14
+  // log out functionality
   const handleLogOut = () => {
     localStorage.removeItem("jwt");
     setIsLoggedIn(false);
@@ -254,7 +247,8 @@ function App() {
   };
 
   return (
-    //CurrentUserContext added for Sprint 14
+    //CurrentUserContext allows data to be shared w/ other files
+    // w/o having to pass props manually through each level
     <CurrentUserContext.Provider value={{ currentUser, isLoggedIn }}>
       <div className="page">
         <CurrentTemperatureUnitContext.Provider
@@ -277,7 +271,6 @@ function App() {
                   weatherData={weatherData}
                   onCardClick={onCardClick}
                   items={clothingItems}
-                  // Sprint 14 ("like functionality")
                   handleCardLike={handleCardLike}
                 />
               }
@@ -293,11 +286,10 @@ function App() {
                     items={clothingItems}
                     onAddClothes={onAddClothes}
                     handleLogOut={handleLogOut}
-                    // ("change profile data") => setActiveModal passed as prop from App.jsx
-                    // to allow setActiveModal to be called within handleEditProfileClick
-                    // in Profile.jsx
+                    // setActiveModal passed as prop from App.jsx to allow
+                    // setActiveModal to be called within
+                    // handleEditProfileClick in Profile.jsx
                     setActiveModal={setActiveModal}
-                    // Sprint 14 ("like functionality")
                     handleCardLike={handleCardLike}
                   />
                 </ProtectedRoute>
@@ -331,7 +323,6 @@ function App() {
           onDelete={onDeleteItem}
         />
 
-        {/* modal added for Sprint 14 */}
         <RegisterModal
           name="registration-form"
           onClose={onClose}
@@ -340,7 +331,6 @@ function App() {
           activeModal={activeModal}
         />
 
-        {/* modal added for Sprint 14 */}
         <LoginModal
           name="login-form"
           onClose={onClose}
@@ -349,8 +339,6 @@ function App() {
           activeModal={activeModal}
         />
 
-        {/* ("change profile data") */}
-        {/* modal added for Sprint 14 */}
         <EditProfileModal
           name="edit-profile-form"
           onClose={onClose}

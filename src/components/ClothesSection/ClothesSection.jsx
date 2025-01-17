@@ -5,8 +5,8 @@ import { useContext } from "react";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
 
 function ClothesSection({ onCardClick, items, onAddClothes, handleCardLike }) {
-  const { currentUser } = useContext(CurrentUserContext); // Sprint 14
-  const userItems = items.filter((item) => item.owner === currentUser._id); // Sprint 14
+  const { currentUser } = useContext(CurrentUserContext);
+  const userItems = items.filter((item) => item.owner === currentUser._id);
 
   return (
     <div className="clothes-section">
@@ -24,7 +24,6 @@ function ClothesSection({ onCardClick, items, onAddClothes, handleCardLike }) {
               key={item._id}
               item={item}
               onCardClick={onCardClick}
-              // Sprint 14 ("like functionality")
               handleCardLike={handleCardLike}
             />
           ))
