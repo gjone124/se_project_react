@@ -17,3 +17,9 @@
   top: 62px;
   color: rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (width < 800px) {
+  .login-modal__or-sign-up-button {
+    display: none;
+  }
+}

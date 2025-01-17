@@ -1,6 +1,8 @@
 .modal__content_type_item {
   width: 100%;
   max-width: 498px;
+  /* max-height: 300px; */
+  /* margin-top: -300px; */
 }
 
 .modal__close-button_type_item {

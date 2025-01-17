@@ -37,9 +37,12 @@ function Main({ weatherData, onCardClick, items, handleCardLike }) {
             No clothing suggestions available at this time for{" "}
             {weatherData.type} weather.
             <br />
+            <br />
             Add a piece of clothing to generate a suggestion.
             <br />
+            <br />
             You must be logged in to add a piece of clothing.
+            <br />
             <br />
           </p>
         )}

@@ -1,6 +1,7 @@
 .profile {
   display: flex;
   gap: 100px;
+  min-height: 500px;
 }
 
 .profile__clothes-section {

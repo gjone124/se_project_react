@@ -63,7 +63,7 @@ function App() {
   /* Initial Data Loading */
 
   // get current user
-  // this method keeps current user logged in when you refresh page (Sprint 14)
+  // autologin functionality (this method keeps current user logged in when you refresh page) (Sprint 14)
   useEffect(() => {
     const token = localStorage.getItem("jwt");
     if (token) {
@@ -193,10 +193,13 @@ function App() {
   /* Authentication Handlers */
   // when there is a successful registration, the user should be logged in (Sprint 14)
   const handleRegistration = ({ email, password, username, avatarUrl }) => {
-    // user presses "Sign Up" button, request to API is sent, if successful registerUser is called to save it in database,
+    // user presses "Sign Up" button, request to API is sent,
+    // if successful registerUser is called to save it in database,
     // response returned, handleLogin called to log in user
     return registerUser({ email, password, username, avatarUrl })
       .then((response) => {
+        // register modal should only close after successful registration
+        // (close method called within handleLogin method)
         handleLogin({ email, password });
       })
       .catch((error) => console.error("Registration error:", error));
@@ -215,7 +218,7 @@ function App() {
     // then set the current user to the current user
     return loginUser({ email, password })
       .then((data) => {
-        if (!data.token) throw new Error("Token not received.");
+        //if (!data.token) throw new Error("Token not received.");
         //"jwt" is the key that data.token is stored in
         localStorage.setItem("jwt", data.token);
         setIsLoggedIn(true);
@@ -223,6 +226,7 @@ function App() {
       })
       .then((user) => {
         setCurrentUser(user);
+        // login modal should only close after successful login
         onClose();
       })
       .catch((error) => console.error("Login error:", error));
@@ -235,6 +239,7 @@ function App() {
     editUserProfile(profileData, token)
       .then((updatedUser) => {
         setCurrentUser(updatedUser);
+        // edit profile modal should only close after successful submission
         onClose();
       })
       .catch((error) => console.error("Error changing data:", error));

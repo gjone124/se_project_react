@@ -1,5 +1,6 @@
 .main {
-  margin: 0 0 85px;
+  margin: 0; /* 0 85px; */
+  min-height: 400px;
 }
 
 .main__text {
@@ -22,6 +23,7 @@
 
 @media screen and (width < 800px) {
   .main {
+    min-height: 530px;
     margin: 0 0 20px;
   }
 

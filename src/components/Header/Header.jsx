@@ -35,6 +35,9 @@ function Header({
         <p className="header__date-and-location">{`${currentDate}, ${weatherData.city}`}</p>
       </div>
       <div
+        /* ternary operator ("?" and ":") used to dynamically change className with 
+        template literals (aka backticks (`)) & string interpolation (${}) (string interpolation allows
+         for a Javascript expression to be embedded within a String)) */
         className={`header__menu ${isMenuOpen ? "header__menu_opened" : ""}`}
       >
         <button
@@ -62,8 +65,10 @@ function Header({
             </Link>
             <button
               type="button"
-              className={`header__clothes-button ${
-                !isMenuOpen ? "header__clothes-button_type_menu-closed" : ""
+              className={`header__button-to-open-form ${
+                !isMenuOpen
+                  ? "header__button-to-open-form_type_menu-closed"
+                  : ""
               }`}
               onClick={onAddClothes}
             >
@@ -78,7 +83,11 @@ function Header({
             {/* button added for Sprint 14 */}
             <button
               type="button"
-              className={`header__clothes-button`}
+              className={`header__button-to-open-form ${
+                !isMenuOpen
+                  ? "header__button-to-open-form_type_menu-closed"
+                  : ""
+              }`}
               onClick={onLogin}
             >
               Log In
@@ -87,7 +96,11 @@ function Header({
             {/* button added for Sprint 14 */}
             <button
               type="button"
-              className={`header__clothes-button`}
+              className={`header__button-to-open-form ${
+                !isMenuOpen
+                  ? "header__button-to-open-form_type_menu-closed"
+                  : ""
+              }`}
               onClick={onRegister}
             >
               Sign Up

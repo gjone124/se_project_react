@@ -155,15 +155,39 @@ The fifth stage (Sprint 14) involves modifying se_project_react (the front end a
 
 6)implementing registration & authorization logic
 
-7)for the profile view, implement buttons for "Change profile data" & "Log out"
+7)if no avatar URL is provided upon registration, have user's avatar display 1st letter of their 1st name (must undo requirement of avatar URL upon registration)
 
-8)implementing edit profile logic
+8)protecting "/profile" route by creating wrapper component that redirects unauthorized users to main page
 
-9)implementing like button for each card
+9)for the profile view, implement buttons for "Change profile data" & "Log out"
 
-10)implementing like & dislike functionality for each card
+10)creating a pop up window for the "Change profile data" form (aka profile modal)
 
-11)implementing "sign out" (or "log out") functionality
+11)implementing edit profile logic
+
+12)modifying card functionality to allow them to be added & deleted w/ authorization token
+
+13)implementing like button for each card
+
+14)implementing like & dislike functionality for each card
+
+15)hiding like button from unauthorized users
+
+16)implementing "sign out" (or "log out") functionality
+
+17)implementing autologin functionality (keeps user logged in when you refresh page)
+
+18)only showing delete item button when user is logged in & is owner of the item
+
+19)inserting profile data into inputs when you open profile modal
+
+20)updating ClothesSection component to only show cards added by current user
+
+21)for main view if there are no cards generated for current weather type, display default message to user (optional)
+
+22)for profile view if there are no clothing items found, display default message to user (optional)
+
+23)implementing changes to mobile version (optional)
 
 **Figma**
 
@@ -180,52 +204,52 @@ Here are ten screenshots of the project (as of Stage 1 / Sprint 10) taken around
 1)Asunción, Paraguay (nighttime, clear, warm)
 
 <div display="flex"><img align="center" alt="Asuncion, Paraguay" 
-src="./src/assets/screenshots/Stage 1 (Sprint 10)/Asuncion, Paraguay.png" /></div><br>
+src="./src/assets/screenshots/Stage 1 (Sprint 10)/(1)Asuncion, Paraguay.png" /></div><br>
 
 2)Bethel, Alaska, USA (daytime, snowy, cold)
 
 <div display="flex"><img align="center" alt="Bethel, Alaska, USA" 
-src="./src/assets/screenshots/Stage 1 (Sprint 10)/Bethel, Alaska, USA.png" /></div><br>
+src="./src/assets/screenshots/Stage 1 (Sprint 10)/(2)Bethel, Alaska, USA.png" /></div><br>
 
 3)Julia Creek, Queensland, Australia (daytime, cloudy, hot)
 
 <div display="flex"><img align="center" alt="Julia Creek, Queensland, Australia" 
-src="./src/assets/screenshots/Stage 1 (Sprint 10)/Julia Creek, Queensland, Australia.png" /></div><br>
+src="./src/assets/screenshots/Stage 1 (Sprint 10)/(3)Julia Creek, Queensland, Australia.png" /></div><br>
 
 4)Washington, DC, USA (nighttime, rainy, cold)
 
 <div display="flex"><img align="center" alt="Washington, DC, USA" 
-src="./src/assets/screenshots/Stage 1 (Sprint 10)/Washington, DC, USA.png" /></div><br>
+src="./src/assets/screenshots/Stage 1 (Sprint 10)/(4)Washington, DC, USA.png" /></div><br>
 
 5)Card Pop Up Window (Desktop Version)
 
 <div display="flex"><img align="center" alt="Card Pop Up Window (Desktop Version)" 
-src="./src/assets/screenshots/Stage 1 (Sprint 10)/Card Pop Up Window (Desktop Version).png" /></div><br>
+src="./src/assets/screenshots/Stage 1 (Sprint 10)/(5)Card Pop Up Window (Desktop Version).png" /></div><br>
 
 6)Add Clothes Pop Up Window (Desktop Version)
 
 <div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Desktop Version)" 
-src="./src/assets/screenshots/Stage 1 (Sprint 10)/Add Clothes Pop Up Window (Desktop Version).png" /></div><br>
+src="./src/assets/screenshots/Stage 1 (Sprint 10)/(6)Add Clothes Pop Up Window (Desktop Version).png" /></div><br>
 
 7)Menu Closed (Mobile Version)
 
 <div display="flex"><img align="center" alt="Menu Closed (Mobile Version)" 
-src="./src/assets/screenshots/Stage 1 (Sprint 10)/Menu Closed (Mobile Version).png" /></div><br>
+src="./src/assets/screenshots/Stage 1 (Sprint 10)/(7)Menu Closed (Mobile Version).png" /></div><br>
 
 8)Menu Open (Mobile Version)
 
 <div display="flex"><img align="center" alt="Menu Open (Mobile Version)" 
-src="./src/assets/screenshots/Stage 1 (Sprint 10)/Menu Open (Mobile Version).png" /></div><br>
+src="./src/assets/screenshots/Stage 1 (Sprint 10)/(8)Menu Open (Mobile Version).png" /></div><br>
 
 9)Card Pop Up Window (Mobile Version)
 
 <div display="flex"><img align="center" alt="Card Pop Up Window (Mobile Version)" 
-src="./src/assets/screenshots/Stage 1 (Sprint 10)/Card Pop Up Window (Mobile Version).png" /></div><br>
+src="./src/assets/screenshots/Stage 1 (Sprint 10)/(9)Card Pop Up Window (Mobile Version).png" /></div><br>
 
 10)Add Clothes Pop Up Window (Mobile Version)
 
 <div display="flex"><img align="center" alt="Add Clothes Pop Up Window (Mobile Version)" 
-src="./src/assets/screenshots/Stage 1 (Sprint 10)/Add Clothes Pop Up Window (Mobile Version).png" /></div><br><br><br><br><br>
+src="./src/assets/screenshots/Stage 1 (Sprint 10)/(10)Add Clothes Pop Up Window (Mobile Version).png" /></div><br><br><br><br><br>
 
 **Images (Stage 2 / Sprint 11)**
 
@@ -234,37 +258,116 @@ Here are seven screenshots of the project (as of Stage 2 / Sprint 11):
 1)Main Component (Fahrenheit)
 
 <div display="flex"><img align="center" alt="Main Component (Fahrenheit)" 
-src="./src/assets/screenshots/Stage 2 (Sprint 11)/Main Component (Fahrenheit).png" /></div><br>
+src="./src/assets/screenshots/Stage 2 (Sprint 11)/(1)Main Component (Fahrenheit).png" /></div><br>
 
 2)Main Component (Celsius)
 
 <div display="flex"><img align="center" alt="Main Component (Celsius)" 
-src="./src/assets/screenshots/Stage 2 (Sprint 11)/Main Component (Celsius).png" /></div><br>
+src="./src/assets/screenshots/Stage 2 (Sprint 11)/(2)Main Component (Celsius).png" /></div><br>
 
 3)Clothing Item Pop-Up Window (Delete Item Button Added)
 
 <div display="flex"><img align="center" alt="Clothing Item Pop-Up Window" 
-src="./src/assets/screenshots/Stage 2 (Sprint 11)/Clothing Item Pop-Up Window.png" /></div><br>
+src="./src/assets/screenshots/Stage 2 (Sprint 11)/(3)Clothing Item Pop-Up Window.png" /></div><br>
 
 4)Delete Item Confirmation Pop-Up Window
 
 <div display="flex"><img align="center" alt="Delete Item Confirmation Pop-Up Window" 
-src="./src/assets/screenshots/Stage 2 (Sprint 11)/Delete Item Confirmation Pop-Up Window.png" /></div><br>
+src="./src/assets/screenshots/Stage 2 (Sprint 11)/(4)Delete Item Confirmation Pop-Up Window.png" /></div><br>
 
 5)Profile Component (Desktop Version)
 
 <div display="flex"><img align="center" alt="Profile Component (Desktop Version)" 
-src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Desktop Version).png" /></div><br>
+src="./src/assets/screenshots/Stage 2 (Sprint 11)/(5)Profile Component (Desktop Version).png" /></div><br>
 
 6)Main Component (Mobile Version)
 
 <div display="flex"><img align="center" alt="Main Component (Mobile Version)" 
-src="./src/assets/screenshots/Stage 2 (Sprint 11)/Main Component (Mobile Version).png" /></div><br>
+src="./src/assets/screenshots/Stage 2 (Sprint 11)/(6)Main Component (Mobile Version).png" /></div><br>
 
 7)Profile Component (Mobile Version)
 
 <div display="flex"><img align="center" alt="Profile Component (Mobile Version)" 
-src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Version).png" /></div><br>
+src="./src/assets/screenshots/Stage 2 (Sprint 11)/(7)Profile Component (Mobile Version).png" /></div><br><br><br><br><br>
+
+**Images (Stage 5 / Sprint 14)**
+
+Here are fifteen screenshots of the project (as of Stage 5 / Sprint 14):
+
+1)Main Page Not Logged In (Desktop)
+
+<div display="flex"><img align="center" alt="Main Page Not Logged In (Desktop)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(1)Main Page Not Logged In (Desktop).png" /></div><br>
+
+2)Register Modal (Desktop)
+
+<div display="flex"><img align="center" alt="Register Modal (Desktop)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(2)Register Modal (Desktop).png" /></div><br>
+
+3)Login Modal (Desktop)
+
+<div display="flex"><img align="center" alt="Login Modal (Desktop)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(3)Login Modal (Desktop).png" /></div><br>
+
+4)Main Page Logged In (Desktop)
+
+<div display="flex"><img align="center" alt="Main Page Logged In (Desktop)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(4)Main Page Logged In (Desktop).png" /></div><br>
+
+5)Profile Page With Card Liked (Desktop)
+
+<div display="flex"><img align="center" alt="Profile Page With Card Liked (Desktop)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(5)Profile Page With Card Liked (Desktop).png" /></div><br>
+
+6)Edit Profile Modal (Desktop)
+
+<div display="flex"><img align="center" alt="Edit Profile Modal (Desktop)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(6)Edit Profile Modal (Desktop).png" /></div><br>
+
+7)Main Page With No Items (Desktop)
+
+<div display="flex"><img align="center" alt="Main Page With No Items (Desktop)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(7)Main Page With No Items (Desktop).png" /></div><br>
+
+8)Profile Page With No Items (Desktop)
+
+<div display="flex"><img align="center" alt="Profile Page With No Items (Desktop)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(8)Profile Page With No Items (Desktop).png" /></div><br>
+
+9)Profile Page Displaying Default Avatar When Avatar Isn't Provided (Desktop)
+
+<div display="flex"><img align="center" alt="Profile Page With No Items (Desktop)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(9)Profile Page Displaying Default Avatar When Avatar Isn't Provided (Desktop).png" /></div><br>
+
+10)Main Page Not Logged In With Menu Closed (Mobile)
+
+<div display="flex"><img align="center" alt="Main Page Not Logged In With Menu Closed (Mobile)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(10)Main Page Not Logged In With Menu Closed (Mobile).png" /></div><br>
+
+11)Main Page Not Logged In With Menu Open (Mobile)
+
+<div display="flex"><img align="center" alt="Main Page Not Logged In With Menu Open (Mobile)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(11)Main Page Not Logged In With Menu Open (Mobile).png" /></div><br>
+
+12)Main Page Logged In With Menu Open (Mobile)
+
+<div display="flex"><img align="center" alt="Main Page Logged In With Menu Open (Mobile)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(12)Main Page Logged In With Menu Open (Mobile).png" /></div><br>
+
+13)Register Modal (Mobile)
+
+<div display="flex"><img align="center" alt="Register Modal (Mobile)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(13)Register Modal (Mobile).png" /></div><br>
+
+14)Profile Page (Mobile)
+
+<div display="flex"><img align="center" alt="Profile Page (Mobile)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(14)Profile Page (Mobile).png" /></div><br>
+
+15)Edit Profile Modal (Mobile)
+
+<div display="flex"><img align="center" alt="Edit Profile Modal (Mobile)" 
+src="./src/assets/screenshots/Stage 5 (Sprint 14)/(15)Edit Profile Modal (Mobile).png" /></div><br><br><br><br><br>
 
 **Tech Used**
 
@@ -284,6 +387,13 @@ src="./src/assets/screenshots/Stage 2 (Sprint 11)/Profile Component (Mobile Vers
 - Figma
 - Mock Server (JSON Server)
 - Routing
+- Authentication
+- Authorization
+- JSON Web Token
+- ternary operators
+- template literals
+- string interpolation
+- conditional rendering
 - Front end application (client side component)
 - Back end application (server side component)
 - Interaction between front end application and back end application

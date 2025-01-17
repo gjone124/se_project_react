@@ -27,7 +27,7 @@
   padding: 0;
 }
 
-.header__clothes-button {
+.header__button-to-open-form {
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 
-.header__clothes-button_type_menu-closed {
+.header__button-to-open-form_type_menu-closed {
   display: block;
 }
 
@@ -164,7 +164,7 @@
     display: block;
   }
 
-  .header__clothes-button_type_menu-closed {
+  .header__button-to-open-form_type_menu-closed {
     display: none;
   }
 

@@ -2,8 +2,7 @@
   min-width: 229px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  /* align-items: center; */
+  /* gap: 16px; */
 }
 
 .side-bar__user-info {
@@ -12,15 +11,10 @@
   gap: 16px;
 }
 
-/* .side-bar__avatar {
-  height: 56px;
-  width: 56px;
-  border-radius: 50%;
-} */
-
 .side-bar__username {
   font-size: 20px;
   font-weight: 700;
+  margin: 0;
 }
 
 .side-bar__username::first-letter {
@@ -50,8 +44,45 @@
   opacity: 0.5;
 }
 
+/* Mobile specific styles */
+.side-bar__mobile-view {
+  display: none;
+  gap: 20px;
+}
+
+.side-bar__mobile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.side-bar__mobile-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
 @media screen and (width < 800px) {
+  .side-bar__user-info {
+    display: none;
+  }
+
+  .side-bar__options {
+    display: none;
+  }
+
+  .side-bar__mobile-view {
+    display: flex;
+    align-items: flex-start;
+  }
+
   .side-bar__username {
     font-size: 24px;
+  }
+
+  .side-bar__button {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
   }
 }

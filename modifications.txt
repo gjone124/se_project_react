@@ -1,7 +1,8 @@
 CONFIGURING TOGGLE SWITCH VISIBILITY WITHIN MENU:
 -I could make this more simple w/ 1 method instead of multiple methods
 
-I paralleled the ToggleSwitch element with "header__clothes-button"
+I paralleled the ToggleSwitch element with "header__clothes-button" 
+(later renamed "header__button-to-open-form")
 
 1, 2, & 3 are modified, 4 & 5 are added, & 6 is deleted
 

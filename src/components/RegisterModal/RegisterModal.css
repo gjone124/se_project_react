@@ -17,3 +17,9 @@
   top: 62px;
   color: rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (width < 800px) {
+  .register-modal__or-login-button {
+    display: none;
+  }
+}
