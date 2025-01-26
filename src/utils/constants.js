@@ -83,7 +83,7 @@ export const defaultClothingItems = [
   },
 ];
 
-export const coordinates = {
+export const COORDINATES = {
   // Location Info As Of 7pm EST, 11/14/2024 (testing different conditions)
   // Washington, DC, USA (where I live; nighttime, rainy, cold)
   latitude: 38.89511,
@@ -102,8 +102,14 @@ export const coordinates = {
   // longitude: 141.7442214,
 };
 
-export const apiKey = "d8633e85ba6b4c163ec058a7b0364964";
+export const API_KEY = "d8633e85ba6b4c163ec058a7b0364964";
 
 // se_project_express is running on port 3001 so this connects
-// the 2 projects wherever baseUrl is referenced (se_project_react is running on port 3000)
-export const baseUrl = "http://localhost:3001";
+// the 2 projects wherever BASE_URL is referenced (se_project_react is running on port 3000)
+
+// if "se_project_express" is being run in production mode, the route "api.wtwr.theoceanforest.com" is called
+// if "se_project_express" is NOT being run in production mode, the route "localhost:3001" is called
+export const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://api.wtwr.theoceanforest.com"
+    : "http://localhost:3001";

@@ -1,4 +1,4 @@
-import { baseUrl } from "./constants.js";
+import { BASE_URL } from "./constants.js";
 import { handleServerResponse } from "./api.js";
 
 // register new user (essentially create or sign up new user)
@@ -8,7 +8,7 @@ function registerUser({ email, password, username, avatarUrl }) {
     return Promise.reject("Missing required fields.");
   }
 
-  return fetch(`${baseUrl}/signup`, {
+  return fetch(`${BASE_URL}/signup`, {
     method: "POST",
     body: JSON.stringify({
       email: email,
@@ -22,11 +22,22 @@ function registerUser({ email, password, username, avatarUrl }) {
 
 // login (or sign in) existing user
 function loginUser({ email, password }) {
-  return fetch(`${baseUrl}/signin`, {
+  return fetch(`${BASE_URL}/signin`, {
     method: "POST",
     body: JSON.stringify({ email, password }),
     headers: { "Content-Type": "application/json" },
   }).then(handleServerResponse);
 }
 
-export { registerUser, loginUser };
+// checks the current user's token to make sure they are authorized
+function verifyUserByCheckingToken() {
+  return fetch(`${BASE_URL}/users/me`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${getToken()}`,
+    },
+  }).then(handleServerResponse);
+}
+
+export { registerUser, loginUser, verifyUserByCheckingToken };

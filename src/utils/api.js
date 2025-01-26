@@ -1,4 +1,4 @@
-import { baseUrl } from "./constants.js";
+import { BASE_URL } from "./constants.js";
 //const token = localStorage.getItem("jwt");
 
 // const token (from above) could be a stale value if a user logs out (not good)
@@ -14,12 +14,12 @@ export const getToken = () => {
 
 // get all items
 export function getItems() {
-  return fetch(`${baseUrl}/items`).then(handleServerResponse);
+  return fetch(`${BASE_URL}/items`).then(handleServerResponse);
 }
 
 // add new item (protected, requires token)
 export function postItem({ name, imageUrl, weather }) {
-  return fetch(`${baseUrl}/items`, {
+  return fetch(`${BASE_URL}/items`, {
     method: "POST",
     body: JSON.stringify({
       name: name,
@@ -35,19 +35,8 @@ export function postItem({ name, imageUrl, weather }) {
 
 // delete item (protected, requires token)
 export function deleteItem(id) {
-  return fetch(`${baseUrl}/items/${id}`, {
+  return fetch(`${BASE_URL}/items/${id}`, {
     method: "DELETE",
-    headers: {
-      "Content-Type": "application/json",
-      authorization: `Bearer ${getToken()}`,
-    },
-  }).then(handleServerResponse);
-}
-
-// checks the current user's token to make sure they are authorized
-export function verifyUserByCheckingToken() {
-  return fetch(`${baseUrl}/users/me`, {
-    method: "GET",
     headers: {
       "Content-Type": "application/json",
       authorization: `Bearer ${getToken()}`,
@@ -57,7 +46,7 @@ export function verifyUserByCheckingToken() {
 
 // change user's username and/or avatar
 export function editUserProfile({ name, avatar }) {
-  return fetch(`${baseUrl}/users/me`, {
+  return fetch(`${BASE_URL}/users/me`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -69,7 +58,7 @@ export function editUserProfile({ name, avatar }) {
 
 // like card (protected, requires token)
 export function addCardLike(id) {
-  return fetch(`${baseUrl}/items/${id}/likes`, {
+  return fetch(`${BASE_URL}/items/${id}/likes`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -80,7 +69,7 @@ export function addCardLike(id) {
 
 // unlike card (protected, requires token)
 export function removeCardLike(id) {
-  return fetch(`${baseUrl}/items/${id}/likes`, {
+  return fetch(`${BASE_URL}/items/${id}/likes`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",

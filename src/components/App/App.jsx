@@ -27,13 +27,16 @@ import {
   getItems,
   postItem,
   deleteItem,
-  verifyUserByCheckingToken,
   editUserProfile,
   addCardLike,
   removeCardLike,
 } from "../../utils/api.js";
-import { coordinates, apiKey } from "../../utils/constants.js";
-import { registerUser, loginUser } from "../../utils/auth.js";
+import { COORDINATES, API_KEY } from "../../utils/constants.js";
+import {
+  registerUser,
+  loginUser,
+  verifyUserByCheckingToken,
+} from "../../utils/auth.js";
 
 // Styling for App.jsx
 import "./App.css";
@@ -82,7 +85,7 @@ function App() {
 
   // get weather
   useEffect(() => {
-    getWeatherData(coordinates, apiKey)
+    getWeatherData(COORDINATES, API_KEY)
       .then((data) => {
         const filteredData = filterWeatherData(data);
         setWeatherData(filteredData);
