@@ -86,7 +86,7 @@ const RegisterModal = ({ name, onClose, onRegister, activeModal, onOpen }) => {
           placeholder="Avatar URL"
           value={userData.avatarUrl}
           onChange={handleChange}
-          //required // (comment out if no avatar provided)
+          //required // (comment out for optional avatar scenario)
         />
       </label>
 

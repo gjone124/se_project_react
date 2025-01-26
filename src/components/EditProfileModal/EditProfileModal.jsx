@@ -65,7 +65,7 @@ const EditProfileModal = ({
       </label>
 
       <label htmlFor="avatar" className="modal-form__label">
-        Avatar *
+        Avatar
         <input
           type="url"
           name="avatar"
@@ -74,7 +74,7 @@ const EditProfileModal = ({
           placeholder="Avatar"
           value={userData.avatar}
           onChange={handleChange}
-          required
+          //required // (comment out for optional avatar scenario)
         />
       </label>
     </ModalWithForm>

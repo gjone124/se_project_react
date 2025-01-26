@@ -9,6 +9,7 @@
 - Stage 3 (Sprint 12) (see se_project_express)
 - Stage 4 (Sprint 13) (see se_project_express)
 - Stage 5 (Sprint 14)
+- Stage 6 (Sprint 15) (see se_project_express)
 - Figma
 - Images
 - Tech Used
