@@ -496,9 +496,13 @@ src="./src/assets/screenshots/Stage 5 (Sprint 14)/(15)Edit Profile Modal (Mobile
 
 **Deployment**
 
-This webpage is deployed to GitHub Pages.
+As of stage 1, this website is deployed to GitHub Pages.
 
 -Deployment Link (as of Stage 1 / Sprint 10): https://gjone124.github.io/se_project_react/
+
+As of stage 6 (the final stage), this website is deployed to a custom domain.
+
+-Deployment Link (as of Stage 6 / Sprint 15): https://wtwr.theoceanforest.com
 
 <br>**Link To Back End Application Of This Project**
 
