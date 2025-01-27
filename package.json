@@ -11,7 +11,7 @@
     "lintsimple": "npx eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && scp -r ./dist/* gjone124@wtwr.theoceanforest.com:/home/gjone124/frontend"
   },
   "dependencies": {
     "react": "^18.3.1",
