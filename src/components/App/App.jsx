@@ -215,7 +215,7 @@ function App() {
     // then set the current user to the current user
     return loginUser({ email, password })
       .then((data) => {
-        //if (!data.token) throw new Error("Token not received.");
+        if (!data.token) throw new Error("Token not received.");
         //"jwt" is the key that data.token is stored in
         localStorage.setItem("jwt", data.token);
         setIsLoggedIn(true);
