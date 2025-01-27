@@ -1,5 +1,5 @@
 import { BASE_URL } from "./constants.js";
-import { handleServerResponse } from "./api.js";
+import { handleServerResponse, getToken } from "./api.js";
 
 // register new user (essentially create or sign up new user)
 function registerUser({ email, password, username, avatarUrl }) {
