@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom"; // BrowserRouter has a base of "/" & HashRouter has base of "/#"
+// import { HashRouter } from "react-router-dom"; (HashRouter allows website to be uploaded to GitHub Pages)
 
 import App from "./components/App/App.jsx";
 

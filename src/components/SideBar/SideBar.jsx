@@ -1,4 +1,4 @@
-import avatar from "../../assets/avatar.svg";
+// import avatar from "../../assets/avatar.svg";
 import { useContext } from "react";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
 import "./SideBar.css";

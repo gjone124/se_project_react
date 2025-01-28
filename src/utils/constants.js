@@ -108,7 +108,7 @@ export const API_KEY = "d8633e85ba6b4c163ec058a7b0364964";
 // the 2 projects wherever BASE_URL is referenced (se_project_react is running on port 3000)
 
 // if "se_project_express" is being run in production mode, the route "api.wtwr.theoceanforest.com" is called
-// if "se_project_express" is NOT being run in production mode, the route "localhost:3001" is called
+// if "se_project_express" is NOT being run in production mode (aka development mode), the route "localhost:3001" is called
 export const BASE_URL =
   process.env.NODE_ENV === "production"
     ? "https://api.wtwr.theoceanforest.com"

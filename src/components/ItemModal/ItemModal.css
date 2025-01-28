@@ -8,7 +8,7 @@
 .modal__close-button_type_item {
   top: 24px;
   right: 24px;
-  background-color: #000000; /* changed from #ffffff */
+  background-color: #000000; /* changed from #ffffff (white); modified to black so close button is more likely to appear (white background image is more likely than black background image; same reason for hover state being commented out below) */
 }
 
 /* .modal__close-button_type_item:hover {

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import wtwrLogo from "../../assets/wtwr-logo.svg";
-import avatar from "../../assets/avatar.svg";
+// import avatar from "../../assets/avatar.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch.jsx";
 
 import { useContext } from "react";

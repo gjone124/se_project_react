@@ -175,7 +175,7 @@ function App() {
     return handleSubmit(addItemRequest);
   }
 
-  function onDeleteItem(item) {
+  function onDeleteItem() {
     const deleteRequest = () => {
       return deleteItem(selectedCard._id).then(() => {
         setClothingItems(
@@ -195,7 +195,7 @@ function App() {
     // if successful registerUser is called to save it in database,
     // response returned, handleLogin called to log in user
     return registerUser({ email, password, username, avatarUrl })
-      .then((response) => {
+      .then(() => {
         // register modal should only close after successful registration
         // (close method called within handleLogin method)
         handleLogin({ email, password });
