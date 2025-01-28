@@ -8,12 +8,12 @@
 .modal__close-button_type_item {
   top: 24px;
   right: 24px;
-  background-color: #ffffff;
+  background-color: #000000; /* changed from #ffffff */
 }
 
-.modal__close-button_type_item:hover {
+/* .modal__close-button_type_item:hover {
   background-color: rgba(0, 0, 0, 0.3);
-}
+} */
 
 .item-modal__image {
   border-radius: 20px 20px 0 0;
