@@ -410,7 +410,7 @@ src="./src/assets/screenshots/Stage 5 (Sprint 14)/(15)Edit Profile Modal (Mobile
 **Chart of Class Inheritance Structure**
 
 - 51 unique files; 12 unique files reused; 91 instances of files being used
-- 20 images; 4 unique image reused; 29 instances of images being used
+- 20 unique images; 4 unique images reused; 29 instances of images being used
 
 - 1)index.html
   - A)main.jsx
