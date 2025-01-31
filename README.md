@@ -74,6 +74,12 @@ Stage 5 (Sprint 14) (see se_project_express for Stage 3 & 4)
 
 11)the program should automatically run on your designated default browser at "localhost:3000"<br><br><br>
 
+Stage 6 (Sprint 15)
+
+1)to run project locally, type "npm run dev" in the terminal & press "Enter"
+
+2)to run project remotely, type "npm run deploy" in the terminal & press "Enter"<br><br><br>
+
 **Stage 1 (Sprint 10)**
 
 For the 1st stage of the project in Sprint 10 (Introduction to React.js), we were given an adaptive web design through
