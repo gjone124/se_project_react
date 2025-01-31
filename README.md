@@ -13,8 +13,9 @@
 - Figma
 - Images
 - Tech Used
-- Structure of Class Inheritance
+- Chart of Class Inheritance Structure
 - Deployment
+- Link To Back End Application of This Project
 
 **Intro**
 
@@ -406,7 +407,10 @@ src="./src/assets/screenshots/Stage 5 (Sprint 14)/(15)Edit Profile Modal (Mobile
 - Interaction between front end application and back end application
 - Full stack application
 
-**Chart of Class Inheritance Structure** (51 unique files; 12 unique files reused; 91 instances of files being used; 47 images not included in chart)
+**Chart of Class Inheritance Structure**
+
+- 51 unique files; 12 unique files reused; 91 instances of files being used
+- 20 images; 4 unique image reused; 29 instances of images being used
 
 - 1)index.html
   - A)main.jsx
@@ -414,21 +418,41 @@ src="./src/assets/screenshots/Stage 5 (Sprint 14)/(15)Edit Profile Modal (Mobile
       - a)App.css
       - b)Header.jsx
         - 1)Header.css
+          - A)hamburger.svg
+          - B)close-button.svg (1st time image is imported)
         - 2)ToggleSwitch.jsx
           - A)ToggleSwitch.css
           - B)CurrentTemperatureUnitContext.js (1st time file is imported)
         - 3)Avatar.jsx (1st time file is imported)
           - A)Avatar.css (1st time file is imported)
           - B)CurrentUserContext.js (1st time file is imported)
+          - C)avatar.svg (1st time image is imported)
         - 4)CurrentUserContext.js (2nd time file is imported)
+        - 5)wtwr-logo.svg
       - c)Main.jsx
         - 1)Main.css
         - 2)WeatherCard.jsx
           - A)WeatherCard.css
           - B)CurrentTemperatureUnitContext.js (2nd time file is imported)
           - C)constants.js (1st time file is imported)
+            - I)clear-day.svg
+            - II)clear-night.svg
+            - III)cloudy-day.svg
+            - IV)cloudy-night.svg
+            - V)default-day.svg
+            - VI)default-night.svg
+            - VII)foggy-day.svg
+            - VIII)foggy-night.svg
+            - IX)rainy-day.svg
+            - X)rainy-night.svg
+            - XI)snowy-day.svg
+            - XII)snowy-night.svg
+            - XIII)stromy-day.svg
+            - XIV)stormy-night.svg
         - 3)ItemCard.jsx (1st time file is imported)
           - A)ItemCard.css (1st time file is imported)
+            - I)heart.png (1st time image is imported)
+            - II)heart_liked.png (1st time image is imported)
           - B)CurrentUserContext.js (3rd time file is imported)
         - 4)CurrentTemperatureUnitContext.js (3rd time file is imported)
       - d)Profile.jsx
@@ -438,11 +462,14 @@ src="./src/assets/screenshots/Stage 5 (Sprint 14)/(15)Edit Profile Modal (Mobile
             - I)Avatar.jsx (2nd time file is imported)
               - a)Avatar.css (2nd time file is imported)
               - b)CurrentUserContext.js (4th time file is imported)
+              - c)avatar.svg (2nd time image is imported)
           - B)CurrentUserContext.js (5th time file is imported)
         - 3)ClothesSection.jsx
           - A)ClothesSection.css
           - B)ItemCard.jsx (2nd time file is imported)
             - I)ItemCard.css (2nd time file is imported)
+              - a)heart.png (2nd time image is imported)
+              - b)heart_liked.png (2nd time image is imported)
             - II)CurrentUserContext.js (6th time file is imported)
           - C)CurrentUserContext.js (7th time file is imported)
       - e)Footer.jsx
@@ -453,16 +480,19 @@ src="./src/assets/screenshots/Stage 5 (Sprint 14)/(15)Edit Profile Modal (Mobile
           - A)ModalWithForm.css (1st time file is imported)
           - B)Modal.jsx (1st time file is imported)
             - I)Modal.css (1st time file is imported)
+              - a)close-button.svg (2nd time image is imported)
       - g)LoginModal.jsx
         - 1)LoginModal.css (empty currently)
         - 2)ModalWithForm.jsx (2nd time file is imported)
           - A)ModalWithForm.css (2nd time file is imported)
           - B)Modal.jsx (2nd time file is imported)
             - I)Modal.css (2nd time file is imported)
+              - a)close-button.svg (3rd time image is imported)
       - h)ItemModal.jsx
         - 1)ItemModal.css
         - 2)Modal.jsx (3rd time file is imported)
           - A)Modal.css (3rd time file is imported)
+            - I)close-button.svg (4th time image is imported)
         - 3)CurrentUserContext.js (8th time file is imported)
       - i)AddItemModal.jsx
         - 1)AddItemModal.css (empty currently)
@@ -470,16 +500,19 @@ src="./src/assets/screenshots/Stage 5 (Sprint 14)/(15)Edit Profile Modal (Mobile
           - A)ModalWithForm.css (3rd time file is imported)
           - B)Modal.jsx (4th time file is imported)
             - I)Modal.css (4th time file is imported)
+              - a)close-button.svg (5th time image is imported)
       - j)DeleteModal.jsx
         - 1)DeleteModal.css
         - 2)Modal.jsx (5th time file is imported)
           - A)Modal.css (5th time file is imported)
+            - I)close-button.svg (6th time image is imported)
       - k)EditProfileModal.jsx
         - 1)EditProfileModal.css (empty currently)
         - 2)ModalWithForm.jsx (4th time file is imported)
           - A)ModalWithForm.css (4th time file is imported)
           - B)Modal.jsx (6th time file is imported)
             - I)Modal.css (6th time file is imported)
+              - a)close-button.svg (7th time image is imported)
         - 3)CurrentUserContext.js (9th time file is imported)
       - l)ProtectedRoute.jsx
       - m)CurrentTemperatureUnitContext.js (4th time file is imported)
@@ -510,6 +543,6 @@ As of stage 6 (the final stage), this website is deployed to a custom domain.
 
 -Deployment Link (as of Stage 6 / Sprint 15): https://wtwr.theoceanforest.com
 
-<br>**Link To Back End Application Of This Project**
+<br>**Link To Back End Application of This Project**
 
 https://github.com/gjone124/se_project_express
