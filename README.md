@@ -402,6 +402,7 @@ src="./src/assets/screenshots/Stage 5 (Sprint 14)/(15)Edit Profile Modal (Mobile
 - template literals
 - string interpolation
 - conditional rendering
+- MERN stack (MongoDB (backend), Express (backend), React (frontend), Node.js (backend))
 - Front end application (client side component)
 - Back end application (server side component)
 - Interaction between front end application and back end application
